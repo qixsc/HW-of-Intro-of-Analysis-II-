@@ -36,5 +36,23 @@
 
 \begin{document}
 \maketitle
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item For any $x > 0$, and for any $\epsilon > 0$, we can find a $N \in \mathbb{N}$ s.t. $\epsilon x > \dfrac{1}{N}$.
+        Also, we can get $x > \dfrac{1}{\epsilon N} > \dfrac{1}{N}$.
+        Thus, $|g_k(x) - 0| = \dfrac{1}{kx} < \epsilon$ for all $k > N$.
+        And for $x = 0$, whatever $k$ we take, $g_k(0) = n \cdot 0 = 0$.
+        Therefore, for any $x > 0$, $\displaystyle\lim_{n\to\infty} g_n(x) = 0$.
 
+        \item Assume for any $0 < \epsilon < 1$, and for a $N \in \mathbb{N}$,
+        we have $|g_k(x) - 0| < \epsilon$ for all $x \geq 0$ with any $k \geq N$.
+        Then, for $g_N$, we can find $x = \dfrac{1}{N}$ s.t. $g_N(x) = Nx = 1 > \epsilon$(contradiction).
+        Thus, $g_n(x)$ is not uniform convergence on $x \geq 0$.
+
+        For $x \geq c > 0$ and any $\epsilon > 0$, $|g_n(x) - 0| = \dfrac{1}{nx} < \dfrac{1}{nc} < \epsilon$ for some $n > N_c \in \mathbb{N}$.
+        Thus, $g_n(x)$ is uniform convergence on $x \geq c > 0$.
+    \end{enumerate}
+
+    \item 
+\end{enumerate}
 \end{document}
