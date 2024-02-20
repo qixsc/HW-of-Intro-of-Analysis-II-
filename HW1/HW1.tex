@@ -9,6 +9,7 @@
 \textwidth 7.2 in
  \textheight  10 in
  \hoffset  0.1in
+\linespread{1.9}
 
 \usepackage{amsthm,amsmath,amssymb,amscd,verbatim,epsfig}
 \usepackage{mathptmx}
@@ -59,7 +60,53 @@
             exsits $N \in \mathbb{N}$ s.t. $d(f_k(x), f(x)) < \epsilon$ for all $x\in E$ and $k > N$.
             Thus, we can get for all $\epsilon > 0$, exists $N \in \mathbb{N}$ s.t. $\sup \{ d(f_k(x), f(x)) \mid x\in E\} < \epsilon$ for $k > N$.
             That means $\sup \{ d(f_k(x), f(x)) \mid x \in E\} \to 0$ as $k\to \infty$.
+        
+            \item[($\impliedby$)] Since $\sup \{ d(f_k(x), f(x)) \mid x\in E\} \to 0$ as $k \to \infty$, for any $\epsilon > 0$,
+            exists $N \in \mathbb{N}$ s.t.
+            
+            $\sup \{ d(f_k(x), f(x)) \mid x \in E\} < \epsilon$ for $k > N$.
+            That means $d(f_k(x), f(x)) < \epsilon$ for all $x$ and $k > N$.
+            Therefore, $f_k \to f$ uniformly.
         \end{enumerate}
+        \newpage
+
+        \item $\ $\begin{enumerate}
+            \item[($\implies$)] Since $f_k \nrightarrow f$ uniformly, for an $\epsilon > 0$ and all $N \in \mathbb{N}$, there exists $x \in E$ s.t. $d(f_N(x), f(x)) > \epsilon$.
+            That means $\sup \{ d(f_k(x), f(x)) \mid x\in E\} > \epsilon$ for all $k \in \mathbb{N}$.
+            Then, we take $x_k\in \{ y \mid y\in E \wedge d(f_k(y), f(y)) > \epsilon\}$ for all $k$.
+            Thus, there exists a sequence $\{ x_k\}$ s.t. $\displaystyle\limsup_{k\to\infty} d(f_k(x_k), f(x_k)) > \epsilon > 0$.
+
+            \item[($\impliedby$)] Since there exists a sequence $\{ x_k \}$ in $E$ s.t. $\displaystyle\limsup_{k\to\infty} d(f_k(x_k), f(x_k)) = \epsilon > 0$,
+
+            $\sup \{ d(f_k(x), f(x)) \mid x\in E\} \nrightarrow 0$ as $k \to \infty$.
+            Thus, by (a), we can get $f_k \nrightarrow f$.
+        \end{enumerate}
+
+        \item Let $f_k(x) = \dfrac{1}{k}e^{-k^2x^2}$ and $f(x) = 0$.
+        First, we get $f_k'(x) = -2kxe^{-k^2x^2}$ and $f(x) > 0$ for all $x$.
+        And it is positive for $x < 0$ and is negative for $x > 0$.
+        Thus, the maximun of $f_k$ occurs at $x = 0$.
+        
+        Then, for any $\epsilon > 0$, there exists $N \in \mathbb{N}$ s.t. $N > \dfrac{1}{\epsilon}$.
+        Therefore, $|f_k(x) - f(x)| < \dfrac{1}{k} < \dfrac{1}{N} < \epsilon$ for all $k > N$ and all $x\in \mathbb{N}$.
+        Thus, $f_k \to f$ uniformly on $x \in \mathbb{R}$.
+
+        For any $x \in \mathbb{R}$, and for any $\epsilon > 0$, exists $N \in \mathbb{N}$
+        s.t. $2Nxe^{-N^2x^2} < \epsilon$ since 
+        
+        $\displaystyle\lim_{n\to\infty} ne^{-n^2x^2} = \displaystyle\lim_{n\to\infty} \dfrac{n}{e^{n^2x^2}} \overset{\rm L'H}{=} \displaystyle\lim_{n\to\infty} \dfrac{1}{2nx^2e^{n^2x^2}} = 0$.
+
+        Thus, $|f_k'(x) - f'(x)| = |2kxe^{-k^2x^2} - 0| < |2Nxe^{-N^2x^2}| < \epsilon$ for all $k > N$.
+        Therefore, $f_k' \to f'$ pointwisely.
+
+        But for any interval contains $0$, we can find $N \in \mathbb{N}$ s.t. $(\dfrac{-1}{N}, 0]$ or $[0, \dfrac{1}{N})$ lies in the interval.
+        Suppose $[0, \dfrac{1}{N})$ lies in the interval.
+        Then, let $f_k''(x) = 2ke^{-2k^2x^2}(2k^2x^2 - 1) = 0$, we can get $x = \dfrac{1}{\sqrt{2} k}$.
+        Then, for $\epsilon = \dfrac{1}{2}$, we can find $x = \dfrac{1}{\sqrt{2}k} \in (\dfrac{-1}{N}, \dfrac{1}{N})$ for all $k > \sqrt{2}N$.
+        Thus, $|f_k'(x)| = 2\dfrac{1}{\sqrt{2}}e^{-\frac{1}{2}} = \sqrt{\dfrac{2}{e}} > \dfrac{1}{2}$.
+
+        For the other case, we take $x = \dfrac{-1}{\sqrt{2}k}$ and the argument also right.
+        Therefore, $f_k'(x) \nrightarrow f$ uniformly on any interval contains $0$.
     \end{enumerate}
 \end{enumerate}
 \end{document}
