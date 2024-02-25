@@ -50,7 +50,8 @@
         Then, for $g_N$, we can find $x = \dfrac{1}{N}$ s.t. $g_N(x) = Nx = 1 > \epsilon$(contradiction).
         Thus, $g_n(x)$ is not uniform convergence on $x \geq 0$.
 
-        For $x \geq c > 0$ and any $\epsilon > 0$, $|g_n(x) - 0| = \dfrac{1}{nx} < \dfrac{1}{nc} < \epsilon$ for some $n > N_c \in \mathbb{N}$.
+        For $x \geq c > 0$ and any $\epsilon > 0$, there exists $N_c \in \mathbb{N}$ s.t. $N_c \cdot c > \dfrac{1}{\epsilon}$.
+        Therefore, $|g_n(x) - 0| = \dfrac{1}{nx} < \dfrac{1}{nc} < \epsilon$ for all $n > N_c$.
         Thus, $g_n(x)$ is uniform convergence on $x \geq c > 0$.
     \end{enumerate}
 
@@ -71,10 +72,9 @@
         \newpage
 
         \item $\ $\begin{enumerate}
-            \item[($\implies$)] Since $f_k \nrightarrow f$ uniformly, for an $\epsilon > 0$ and all $N \in \mathbb{N}$, there exists $x \in E$ s.t. $d(f_N(x), f(x)) > \epsilon$.
-            That means $\sup \{ d(f_k(x), f(x)) \mid x\in E\} > \epsilon$ for all $k \in \mathbb{N}$.
-            Then, we take $x_k\in \{ y \mid y\in E \wedge d(f_k(y), f(y)) > \epsilon\}$ for all $k$.
-            Thus, there exists a sequence $\{ x_k\}$ s.t. $\displaystyle\limsup_{k\to\infty} d(f_k(x_k), f(x_k)) > \epsilon > 0$.
+            \item[($\implies$)] First, for any $\epsilon > 0$ and a $x_0 \in E$, we take$x_k \in \{ x \mid f_k(x) - f(x) > \epsilon, x_0\}$ for any $k$.
+            Sicne $f_k \nrightarrow f$ uniformly, we can find some $k > N$ for any $N\in \mathbb{N}$ s.t. $f_k(x) - f(x) > \epsilon$.
+            Thus, the sequence $\{ x_k\}$ satisfies that $\displaystyle\limsup_{k\to\infty} d(f_k(x_k), f(x_k)) \geq \epsilon > 0$.
 
             \item[($\impliedby$)] Since there exists a sequence $\{ x_k \}$ in $E$ s.t. $\displaystyle\limsup_{k\to\infty} d(f_k(x_k), f(x_k)) = \epsilon > 0$,
 
