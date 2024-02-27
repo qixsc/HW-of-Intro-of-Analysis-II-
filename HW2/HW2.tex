@@ -45,5 +45,14 @@
     \end{align*}
 
 
+    \item Since $f_k \to f$ uniformly and $f_k$ are continuous, $f$ is continuous.
+    Then, for any $\epsilon > 0$, we have $\delta > 0 $ s.t. if $|y - y'| < \delta$ then $|f(y) - f(y')| < \dfrac{\epsilon}{2}$ for all $y, y' \in \mathbb{R}$.
+    Since $x_k \to x$, there exists $N_1 \in \mathbb{N}$ s.t. $|x_k - x| < \epsilon$ for all $k > N_1$.
+    Also we have $N_2 \in \mathbb{N}$ s.t. $|f_k(x) - f(x)| < \dfrac{\epsilon}{2}$ for all $k > N_2$.
+
+    Then, take $N  = \max\{ N_1, N_2\}$, we can get $|f_k(x_k) - f(x)| \leq |f_k(x_k) - f_k(x)| + |f_k(x) - f(x)| = \dfrac{\epsilon}{2} + \dfrac{\epsilon}{2} = \epsilon$ for all $k > N$.
+    Thus, $\displaystyle\lim_{k\to\infty} f_k(x_k) = f(x)$.
+
+
 \end{enumerate}
 \end{document}
