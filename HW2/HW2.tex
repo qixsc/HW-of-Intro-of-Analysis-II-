@@ -34,14 +34,14 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
-    \item Suppose $f_k(x) = \displaystyle\sum_{n=1}^{k} \dfrac{x}{n^\alpha (1+nx^2)}$ and $E_L = [-L, L]$ for $L \in \mathbb{N}$.
+    \item Suppose $f_k(x) = \displaystyle\sum_{n=1}^{k} \dfrac{x}{n^\alpha (1+nx^2)}$ and $E_I = [-L, L]$ for $L \in \mathbb{N}$.
     Then, we want to proof that 
     for all $\epsilon > 0$, there exists $N \in \mathbb{N}$ s.t. 
-    $|f_k(x) - f_l(x)| < \epsilon$ for all $k, l > N$ and all $x \in E_L$.
+    $|f_k(x) - f_l(x)| < \epsilon$ for all $k, l > N$ and all $x \in I_L$.
 
     First, suppose that $l > k > N$, then \begin{align*}
         |f_k(x) - f_l(x)| &= \sum_{n=k}^l \dfrac{x}{n^\alpha (1+nx^2)}\\
-        & \leq \sum_{n=k}^{l} \dfrac{L}{n^\alpha(1+nL^2)}
+        & \leq \sum_{n=k}^{l} \dfrac{L}{n^\alpha(1+nL^2)}\\
     \end{align*}
 
 
