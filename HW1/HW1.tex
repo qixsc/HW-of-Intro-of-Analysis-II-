@@ -72,7 +72,7 @@
         \newpage
 
         \item $\ $\begin{enumerate}
-            \item[($\implies$)] First, for any $\epsilon > 0$ and a $x_0 \in E$, we take$x_k \in \{ x \mid f_k(x) - f(x) > \epsilon, x_0\}$ for any $k$.
+            \item[($\implies$)] First, for any $\epsilon > 0$ and a $x_0 \in E$, we take $x_k \in \{ x \mid f_k(x) - f(x) > \epsilon \vee x = x_0\}$ for any $k$.
             Sicne $f_k \nrightarrow f$ uniformly, we can find some $k > N$ for any $N\in \mathbb{N}$ s.t. $f_k(x) - f(x) > \epsilon$.
             Thus, the sequence $\{ x_k\}$ satisfies that $\displaystyle\limsup_{k\to\infty} d(f_k(x_k), f(x_k)) \geq \epsilon > 0$.
 
