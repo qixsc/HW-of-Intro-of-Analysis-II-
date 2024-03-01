@@ -42,6 +42,7 @@
     First, we observe at the funciton $f_k$, a single term of $f_k$ we call $f_{k, n} = \dfrac{x}{n^{\alpha}(1+nx^2)}$.
 
     $f_{k, n}'(x) = \dfrac{n^{\alpha}(1+nx^2) - xn^{\alpha}(2nx)}{n^{2\alpha}(1+nx^2)^2} = \dfrac{1-nx^2}{n^{\alpha}(1+nx^2)^2}$ would equal to $0$ at $x = \dfrac{1}{\sqrt{n}}$.
+    Thus, 
 
     \item Since $f_k \to f$ uniformly and $f_k$ are continuous, $f$ is continuous.
     Then, for any $\epsilon > 0$, we have $\delta > 0 $ s.t. if $|y - y'| < \delta$ then $|f(y) - f(y')| < \dfrac{\epsilon}{2}$ for all $y, y' \in \mathbb{R}$.
@@ -55,7 +56,7 @@
     And since $f$ is continuous, we can find the maximun of $|f|$ on $[0, 1]$ which is called as $M$.
     For any $\epsilon > 0$, there exists $N_1 \in \mathbb{N}$ s.t. $|f_k(x) - f(x)| < \dfrac{\epsilon}{4}$ for all $k > N_1$.
     And there exists $N_2 \in \mathbb{N}$ s.t. $N_2 > \dfrac{M}{2\epsilon}$.
-    Then, take $n > N = \max{N_1, N_2}$ \begin{align*}
+    Then, take $n > N = \max\{N_1, N_2\}$ \begin{align*}
         \left|\int_0^{1-\frac{1}{n}} f_n(x) dx - \int_0^1 f(x) dx\right| &\leq \left|\int_{0}^{1-\dfrac{1}{n}} f_n(x) - f(x) dx\right| + \left|\int_{1-\dfrac{1}{n}}^{1} f(x)\right|\\
         &\leq \int_0^1 |f_k(x) - f(x)| dx + \dfrac{1}{n} \cdot M\\
         &\leq 1 \cdot 2\dfrac{\epsilon}{4} + \dfrac{\epsilon}{2}\\
