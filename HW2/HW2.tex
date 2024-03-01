@@ -34,18 +34,14 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
-    \item Suppose $f_k(x) = \displaystyle\sum_{n=1}^{k} \dfrac{x}{n^\alpha (1+nx^2)}$ and $E_I = [-L, L]$ for $L \in \mathbb{N}$.
+    \item Suppose $f_k(x) = \displaystyle\sum_{n=1}^{k} \dfrac{x}{n^\alpha (1+nx^2)}$.
     Then, we want to proof that 
     for all $\epsilon > 0$, there exists $N \in \mathbb{N}$ s.t. 
-    $|f_k(x) - f_l(x)| < \epsilon$ for all $k, l > N$ and all $x \in I_L$.
+    $|f_k(x) - f_l(x)| < \epsilon$ for all $k, l > N$ and all $x \in I$ where $I$ is a finite interval in $\mathbb{R}$.
 
-    First, suppose that $l > k > N$, then \begin{align*}
-        |f_k(x) - f_l(x)| &= \sum_{n=k}^l \dfrac{x}{n^\alpha (1+nx^2)}\\
-        &\leq \displaystyle\sum_{n=k}^{l} \dfrac{x}{n^{\alpha+1} x^2}\\
-        &= \displaystyle\sum_{n=k}^l \dfrac{1}{n^{\alpha+1} x}\\
-        &= 
-    \end{align*}
+    First, we observe at the funciton $f_k$, a single term of $f_k$ we call $f_{k, n} = \dfrac{x}{n^{\alpha}(1+nx^2)}$.
 
+    $f_{k, n}'(x) = \dfrac{n^{\alpha}(1+nx^2) - xn^{\alpha}(2nx)}{n^{2\alpha}(1+nx^2)^2} = \dfrac{1-nx^2}{n^{\alpha}(1+nx^2)^2}$ would equal to $0$ at $x = \dfrac{1}{\sqrt{n}}$.
 
     \item Since $f_k \to f$ uniformly and $f_k$ are continuous, $f$ is continuous.
     Then, for any $\epsilon > 0$, we have $\delta > 0 $ s.t. if $|y - y'| < \delta$ then $|f(y) - f(y')| < \dfrac{\epsilon}{2}$ for all $y, y' \in \mathbb{R}$.
