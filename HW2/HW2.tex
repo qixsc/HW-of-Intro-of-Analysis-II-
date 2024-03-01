@@ -57,7 +57,7 @@
     For any $\epsilon > 0$, there exists $N_1 \in \mathbb{N}$ s.t. $|f_k(x) - f(x)| < \dfrac{\epsilon}{4}$ for all $k > N_1$.
     And there exists $N_2 \in \mathbb{N}$ s.t. $N_2 > \dfrac{M}{2\epsilon}$.
     Then, take $n > N = \max\{N_1, N_2\}$ \begin{align*}
-        \left|\int_0^{1-\frac{1}{n}} f_n(x) dx - \int_0^1 f(x) dx\right| &\leq \left|\int_{0}^{1-\dfrac{1}{n}} f_n(x) - f(x) dx\right| + \left|\int_{1-\dfrac{1}{n}}^{1} f(x)\right|\\
+        \left|\int_0^{1-\frac{1}{n}} f_n(x) dx - \int_0^1 f(x) dx\right| &\leq \left|\int_{0}^{1-\frac{1}{n}} f_n(x) - f(x)\ dx\right| + \left|\int_{1-\frac{1}{n}}^{1} f(x)\ dx\right|\\
         &\leq \int_0^1 |f_k(x) - f(x)| dx + \dfrac{1}{n} \cdot M\\
         &\leq 1 \cdot 2\dfrac{\epsilon}{4} + \dfrac{\epsilon}{2}\\
         &= \epsilon
