@@ -58,7 +58,7 @@
     \item Since $f_n$ are continuous and converges uniformly, $f$ is continuous(also integrable on $[0, 1]$).
     And since $f$ is continuous, we can find the maximun of $|f|$ on $[0, 1]$ which is called as $M$.
     For any $\epsilon > 0$, there exists $N_1 \in \mathbb{N}$ s.t. $|f_k(x) - f(x)| < \dfrac{\epsilon}{4}$ for all $k > N_1$.
-    And there exists $N_2 \in \mathbb{N}$ s.t. $N_2 > \dfrac{M}{\epsilon}$.
+    And there exists $N_2 \in \mathbb{N}$ s.t. $N_2 > \dfrac{M}{2\epsilon}$.
     Then, take $n > N = \max{N_1, N_2}$ \begin{align*}
         \left|\int_0^{1-\frac{1}{n}} f_n(x) dx - \int_0^1 f(x) dx\right| &\leq \left|\int_{0}^{1-\dfrac{1}{n}} f_n(x) - f(x) dx\right| + \left|\int_{1-\dfrac{1}{n}}^{1} f(x)\right|\\
         &\leq \int_0^1 |f_k(x) - f(x)| dx + \dfrac{1}{n} \cdot M\\
