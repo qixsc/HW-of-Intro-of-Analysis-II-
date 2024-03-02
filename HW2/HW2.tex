@@ -64,6 +64,19 @@
 
     Thus, $\displaystyle\lim_{n\to\infty} \displaystyle\int_{0}^{1-\frac{1}{n}} f_n(x) dx = \displaystyle\int_0^1 f(x) dx$.
 
-    \item Since $|f_n| \leq g$, 
+    \item Since $|f_k| \leq g$, we have $|f_k(x) - f(x)| \leq 2g(x)$.
+    For any $\epsilon > 0$, there exists larger enough $n$ s.t. 
+    $\displaystyle\int_{0}^{\frac{1}{n}} 2g(x)\ dx$ and $\displaystyle\int_{n}^{\infty} 2g(x)\ dx$ less than $\dfrac{\epsilon}{3}$.
+    And there exists $N \in \mathbb{N}$ s.t. $|f_k(x) - f(x)| < \dfrac{\epsilon}{3(n+1)}$ for all $k > N$.
+
+    Then, \begin{align*}
+        \left|\int_{0}^{\infty} f_k(x)\ dx - \int_{0}^{\infty} f(x)\ dx\right| &\leq \int_{0}^{\infty} |f_k(x)- f(x)| dx\\
+        &= \int_{0}^{\frac{1}{n}} |f_k(x) - f(x)|\ dx + \int_{\frac{1}{n}}^{n} |f_k(x) - f(x)|\ dx + \int_{n}^{\infty} |f_k(x) - f(x)|\ dx\\
+        &\leq \int_{0}^{\frac{1}{n}} 2g(x)\ dx + \int_{n}^{\infty} 2g(x)\ dx + \int_{\frac{1}{n}}^{n} |f_k(x) - f(x)|\ dx\\
+        &\leq \dfrac{\epsilon}{3} + \dfrac{\epsilon}{3} + \dfrac{\epsilon}{3}\\
+        &= \epsilon
+    \end{align*}
+
+    Thus, $\displaystyle\lim_{n\to \infty} \displaystyle\int_{0}^{\infty} f_n(x)\ dx = \displaystyle\int_{0}^{\infty} f(x)\ dx$.
 \end{enumerate}
 \end{document}
