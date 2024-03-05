@@ -53,8 +53,12 @@
     \end{align*}
     Therefore, $\displaystyle\sum_{n=0}^{\infty} a_n = A$.
 
+    \newpage
     \item We have $\displaystyle\lim_{x\to 1^{-}} f(x) = A$ and $f(x) = \displaystyle\sum_{n=0}^{\infty} a_n x^n$.
     
-
+    \begin{align*}
+        \sum_{n=0}^{N} a_n &= \sum_{n=0}^{N} a_n(1 - x^n) - \sum_{n=N+1}^{\infty} a_nx^{n} + f(x)\\
+        &\to 0 - 0 + A\text{ as } x \to 1^-\text{ and } N \to \infty
+    \end{align*}
 \end{enumerate}
 \end{document}
