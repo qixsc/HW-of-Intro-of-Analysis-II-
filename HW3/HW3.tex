@@ -34,6 +34,16 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
+    \item For all $\epsilon > 0$, we can find a $N \in \mathbb{N}$ s.t. $|a_n - a| < \dfrac{\epsilon}{2}$ for all $n > N$.
+    And we can find a $N' > N$ s.t. $\dfrac{\displaystyle\sum_{i=1}^{N} a_i - a}{N'} < \dfrac{\epsilon}{2}$.
+    Thus, for any $n > N'$, \begin{align*}
+        |\dfrac{\sum_{i=1}^{n} a_i }{n} - a| &\leq |\dfrac{\sum_{i=1}^{N} a_i - a}{n}| + |\dfrac{\sum_{i=N}^{n} a_i - a}{n - N'}|\\
+        &< \dfrac{\epsilon}{2} + \dfrac{\epsilon}{2}\\
+        &= \epsilon
+    \end{align*}
+    Therefore, $\displaystyle\lim_{n\to\infty} b_n = a$.
+
     \item 
+    
 \end{enumerate}
 \end{document}
