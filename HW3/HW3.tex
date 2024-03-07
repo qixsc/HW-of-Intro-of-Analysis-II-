@@ -45,11 +45,11 @@
 
     \item Since $\displaystyle\lim_{n\to\infty} na_n = 0$, by 1., $\displaystyle\lim_{N\to\infty} \displaystyle\sum_{n=0}^{N} a_n = \displaystyle\lim_{N\to\infty} \displaystyle\sum_{n=0}^{N} \dfrac{na_n}{N} = 0$
     Also, since $\displaystyle\lim_{n\to\infty} na_n = 0$, $\displaystyle\lim_{n\to\infty} a_n = 0$.
-    Thus, for any $\epsilon > 0$,  there exists a $N \in \mathbb{N}$ s.t. $|\displaystyle\sum_{n=0}^{k} a_n| < \dfrac{\epsilon}{2}$ for all $k > N$.
-    Then, for $x \to 1^{-}$ s.t. $|f(x) - A| < \dfrac{\epsilon}{2}$, \begin{align*}
-        \sum_{n=0}^{N} a_n - A &= \sum_{n=0}^{N} a_n(1-x^n) - \sum_{n=N+1}^{\infty} a_n x^n + (f(x) - A)\\
-        &\leq \dfrac{\epsilon}{2} - 0 + \dfrac{\epsilon}{2}\\
-        &= \epsilon
+    Thus, for any $\epsilon > 0$,  there exists a $N \in \mathbb{N}$ s.t. $|\displaystyle\sum_{n=k+1}^{\infty} a_n| < \dfrac{\epsilon}{3}$ for all $k > N$.
+    Then, for $x \to 1^{-}$ s.t. $|f(x) - A| < \dfrac{\epsilon}{3}$ and $|\displaystyle\sum_{n=1}^{k} a_n(1-x)| < \dfrac{\epsilon}{3}$, \begin{align*}
+        |\sum_{n=0}^{N} a_n - A| &= |\sum_{n=0}^{N} a_n(1-x^n) - \sum_{n=N+1}^{\infty} a_n x^n + (f(x) - A)|\\
+        &\leq |\sum_{n=0}^{N} a_n(1-x)| + |\sum_{n=N+1}^{\infty} a_n x^n| + |f(x) - A|\\
+        &\leq \dfrac{\epsilon}{3} + \dfrac{\epsilon}{3} + \dfrac{\epsilon}{3} = \epsilon
     \end{align*}
     Therefore, $\displaystyle\sum_{n=0}^{\infty} a_n = A$.
 
