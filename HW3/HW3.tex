@@ -54,11 +54,12 @@
     Therefore, $\displaystyle\sum_{n=0}^{\infty} a_n = A$.
 
     \newpage
-    \item We have $\displaystyle\lim_{x\to 1^{-}} f(x) = A$ and $f(x) = \displaystyle\sum_{n=0}^{\infty} a_n x^n$.
+    \item Since $\displaystyle\lim_{x\to 1^-} \displaystyle\sum_{n=1}^{\infty} a_nx^n = A$,
     
     \begin{align*}
-        \sum_{n=0}^{N} a_n &= \sum_{n=0}^{N} a_n(1 - x^n) - \sum_{n=N+1}^{\infty} a_nx^{n} + f(x)\\
-        &\to 0 - 0 + A\text{ as } x \to 1^-\text{ and } N \to \infty
+        |\sum_{n=0}^{N} a_n - A| &\leq |\sum_{n=0}^{N} a_n(1-x^n)| + |\sum_{n=1}^{\infty} a_nx^n|\\
+        &< \dfrac{\epsilon}{2} + \dfrac{\epsilon}{2}\\
+        &= \epsilon
     \end{align*}
 
     \item $\ $\begin{enumerate}
