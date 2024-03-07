@@ -55,14 +55,17 @@
 
     \newpage
     \item Since $\displaystyle\lim_{x\to 1^-} \displaystyle\sum_{n=1}^{\infty} a_nx^n = A$,
-    for any $\epsilon > 0$, we can find a $x_1 \in (0, 1)$ s.t. $|\displaystyle\sum_{n=1}^{\infty} a_nx^n - A| < \dfrac{\epsilon}{2}$ for all $x_1 < x < 1$.
+    for any $\epsilon > 0$, we can find a $x_1 \in (0, 1)$ s.t. $|\displaystyle\sum_{n=1}^{\infty} a_nx^n - A| < \dfrac{\epsilon}{3}$ for all $x_1 < x < 1$.
+    Then, there exists $N\in\mathbb{N}$ s.t. $|\sum_{n=N'=1}^{\infty} a_n x^n| < \dfrac{\epsilon}{3}$ for all $x$ and $N' > N$.
+    And we have $x_2$ s.t. $|\displaystyle\sum_{n=1}^{N} a_n(1-x^n)| < \dfrac{\epsilon}{3}$ for all $x_2 < x < 1$.
 
-    
+    Thus, for any $N' > N$ and $x > \max\{ x_1, x_2\}$,
     \begin{align*}
-        |\sum_{n=0}^{N} a_n - A| &\leq |\sum_{n=0}^{N} a_n(1-x^n)| + |\sum_{n=1}^{\infty} a_nx^n|\\
-        &< \dfrac{\epsilon}{2} + \dfrac{\epsilon}{2}\\
+        |\sum_{n=0}^{N} a_n - A| &\leq |\sum_{n=0}^{N'} a_n(1-x^n)| + |\sum_{n=N'+1}^{\infty} a_n x^n | + |\sum_{n=1}^{\infty} a_nx^n - A|\\
+        &< \dfrac{\epsilon}{3} + \dfrac{\epsilon}{3} + \dfrac{\epsilon}{3}\\
         &= \epsilon
     \end{align*}
+    Thus, $\displaystyle\sum_{n=1}^{\infty} a_n = A$.
 
     \item $\ $\begin{enumerate}
         \item[($\implies$)] Since $\displaystyle\sum_{n=1}^{\infty} a_n \sin(nx)$ converges uniformly, 
