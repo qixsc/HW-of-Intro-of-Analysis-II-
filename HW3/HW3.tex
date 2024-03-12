@@ -72,6 +72,9 @@
         there exists a $N \in \mathbb{N}$ s.t. $|\displaystyle\sum_{n=N}^{2N-1} a_n \sin(nx)| < \epsilon$ for all $x$.
         Let $x = \dfrac{1}{2N}$, then $\sin(nx) = \sin(\dfrac{n}{2N})\in [\sin(\frac{1}{2}), 1)$.
         Thus, $\displaystyle\sum_{n=N}^{2N-1} a_n \sin(nx) > \displaystyle\sum_{n=N}^{2N-1} a_n \sin(\dfrac{1}{2}) \geq \displaystyle\sum_{n=N}^{2N-1} a_{2n} \sin(\dfrac{1}{2}) = \dfrac{2n}{2} \sin(\dfrac{1}{2})a_{2n}$.
+        Therefore, $2n a_{2n} < \dfrac{2}{\sin(\frac{1}{2})}\epsilon$.
+        Using the similar way, we can get $(2n-1) a_{2n-1}\to 0$ as $n\to\infty$ also.
+        Hence, we get $na_n\to 0$ as $n\to\infty$.
 
         \item[($\impliedby$)] 
         
