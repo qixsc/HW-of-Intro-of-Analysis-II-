@@ -81,12 +81,14 @@
         And since $|\sin(nx)|$ is periodic function, we only need to check the series converges on $[0, \pi]$.
         Then, we want to proof $|\displaystyle\sum_{k=n}^{n+p} a_k \sin(kx)|$ uniformly converges for $n > N$ and $p\in N$.
         We seperate the interval into $[0, \dfrac{\pi}{n+p}],\ [\dfrac{\pi}{n+p}, \dfrac{\pi}{n}],\ [\dfrac{\pi}{n}, \pi]$ three interval.
-        
         First one, \begin{align*}
             |\sum_{k=n}^{n+p} a_k \sin(kx)| &\leq \sum_{k=n}^{n+p} a_k \cdot k \cdot x\\
             &\leq \dfrac{k=n}{n+p} k\cdot k \cdot \dfrac{\pi}{n+p}\\
-            &\leq 
+            &\leq (p+1) \dfrac{\epsilon}{\pi}\cdot \dfrac{\pi}{n+p}\\
+            & < \epsilon.
         \end{align*}
+
+        And the second interval, 
         
     \end{enumerate}
 \end{enumerate}
