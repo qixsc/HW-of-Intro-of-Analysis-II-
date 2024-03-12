@@ -75,8 +75,10 @@
         $\displaystyle\lim_{N\to\infty}|\displaystyle\sum_{n=N+1}^{\infty} a_n| = \displaystyle\lim_{N\to\infty} \displaystyle\sum_{n=N+1}^{\infty} \dfrac{na_n}{n} = 0$.
         By 1., $\displaystyle\lim_{n\to\infty} na_n = 0$.
 
-        \item[($\impliedby$)] Since $na_n \to 0$, we have         
-        $\displaystyle\lim_{n\to\infty} \dfrac{\displaystyle\sum_{k=1}^{n} ka_k}{n} = \displaystyle\lim_{n\to\infty} \displaystyle\sum_{k=1}^{n} \dfrac{k}{n}a_k = 0$.
+        \item[($\impliedby$)] First, since $\dfrac{1}{n} \to 0$ and $\displaystyle\sum_{n=1}^{m} sin(nx) = \dfrac{\sin(\frac{mx}{2})\sin(\frac{(m+1)x}{2})}{\sin(\frac{1}{2})}$
+        Since $na_n \to 0$ and $\displaystyle\sum_{n=1}^{\infty} \dfrac{sin(nx)}{n}$ is bdd( since it converges), 
+        by Dirichlet's test again, $\displaystyle\sum_{n=1}^{\infty} na_n \dfrac{\sin(nx)}{n} = \displaystyle\sum_{n=1}^{\infty} a_n\sin(nx)$ converges.
+        
         
     \end{enumerate}
 \end{enumerate}
