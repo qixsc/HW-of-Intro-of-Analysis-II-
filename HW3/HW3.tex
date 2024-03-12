@@ -91,9 +91,19 @@
         \newpage
         And the second interval, let $m = [\dfrac{\pi}{x}]$.
         We want to show that for any $n\in\mathbb{N}$ and $x\in [\dfrac{\pi}{n+p}, \pi]$, $\displaystyle\sum_{k=1}^{n} a_k \sin(n_k) \leq \dfrac{1}{\sin(\frac{x}{2})}$.
-
-
-
+        Since $2\sin(\dfrac{x}{2})\sin(kx) = \cos((k-\dfrac{1}{2})x) - \cos((k+\dfrac{1}{2})x)$,
+        \begin{align*}
+            |\sum_{k=1}^{n} \sin(kx)| &= \dfrac{1}{2\sin(\frac{x}{2})}|\sum_{k=1}^{n} \cos((k-\dfrac{1}{2})x) - \cos((k+\dfrac{1}{2})x)|\\
+            &= \dfrac{1}{2\sin(\frac{x}{2})} |\cos(\dfrac{1}{2}x) - \cos((n-\dfrac{1}{2})x)|\\
+            &\leq \dfrac{1}{\sin(\frac{x}{2})}.
+        \end{align*}
+        Then, we want to show $|\displaystyle\sum_{k=m+1}^{n+p} a_k \sin(kx)|\leq \dfrac{2a_{m+1}}{\sin(\frac{x}{2})}$.
+        Using Abel's formula, \begin{align*}
+            |\sum_{k=m+1}^{n+p} a_k\sin(kx)| &\leq a_{n+p} |\sum_{k=m+1}^{n+p} sin(kx)| + \sum_{k=m+1}^{n+p-1} |\sum_{j=m+1}^{k} sin(jx)|(a_k - a_{k-1})\\
+            &\leq a_{n+p}\dfrac{2}{\sin(\frac{x}{2})} + \dfrac{2}{\sin(\frac{x}{2})} \sum_{k=m+1}^{n+p-1}(a_k - a_{k-1})\\
+            &= \dfrac{2}{\sin(\frac{x}{2})} (a_{n+p} + a_{m+1} - a_{n+p})\\
+            &= \dfrac{2a_{m+1}}{\sin(\frac{x}{2})}
+        \end{align*}
 
         Then, \begin{align*}
             |\sum_{k=n}^{n+p} a_k \sin(kx)| &\leq \sum_{k=n}^{m} a_k \sin(kx) + |\sum_{k=m+1}^{n+p} a_k\sin(kx)|\\
