@@ -105,10 +105,22 @@
             &= \dfrac{2a_{m+1}}{\sin(\frac{x}{2})}
         \end{align*}
 
-        Then, \begin{align*}
+        Thus, \begin{align*}
             |\sum_{k=n}^{n+p} a_k \sin(kx)| &\leq \sum_{k=n}^{m} a_k \sin(kx) + |\sum_{k=m+1}^{n+p} a_k\sin(kx)|\\
-            & \leq 
+            &\leq  \sum_{k=n}^{m} ka_k\cdot x + \dfrac{2a_{m+1}}{\sin(\frac{x}{2})}\\
+            &\leq (m-n+1) \dfrac{\epsilon}{\pi}x + 2a_{m+1} \dfrac{\pi}{x}\\
+            &\leq m \dfrac{x}{\pi} \epsilon + 2 a_{m+1} (m+1)\\
+            &\leq \epsilon + 2\dfrac{\epsilon}{\pi}
         \end{align*}
+
+        And the third one, \begin{align*}
+            |\sum_{k=n}^{n+p} a_k \sin(kx)| &\leq \dfrac{2a_n}{\sin(\frac{x}{2})} \\
+            &\leq \dfrac{2\pi}{2x} a_n\\
+            &\leq n a_n\\
+            &< \dfrac{\epsilon}{\pi}
+        \end{align*}
+
+        Thus, $\displaystyle\sum_{n=1}^{\infty} a_n \sin(nx)$ converges uniformly.
         
     \end{enumerate}
 \end{enumerate}
