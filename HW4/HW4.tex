@@ -37,12 +37,19 @@
     \item Since $B$ is equicontinuous, for any $f \in B$ and $\epsilon > 0$, 
     there exists $\delta > 0$ s.t.  for any $x, y\in A$, $|x - y| < \delta$ implies that $|f(x) - f(y)| < \dfrac{\epsilon}{2}$.
 
-    \item First, since $|f'(x)| \leq 1$ for all $f\in B$ and $x\in (0, 1)$.
+    \item First, we want to show that $B$ is closed.
+    For any sequence $f_k \in B$ which converges to $f$, 
+    
+    Then, since $|f'(x)| \leq 1$ for all $f\in B$ and $x\in (0, 1)$.
     For any $\epsilon > 0$, we take $\delta < \epsilon$,
     for any $x, y \in [0, 1]$ s.t. $|x - y| < \epsilon$, 
     $|f(x) - f(y)| \leq 1 \cdot |x-y| = \delta < \epsilon$.
     Thus, $B$ is equicontinuous.
 
+    Last, for any $x \in [0, 1]$, we want to proof $B_x$ is compact.
+    For $x = 0$, $B_0 = \{ 0\}$ obviously compact.
+    For $x > 0$, since $|f'|\leq 1$, we can easily get $B_x = [-x, x]$ by $f(x) = ax$ for all $|a| \leq 1$.
+    Thus, $B$ is pointwise compact.
 
 \end{enumerate}
 \end{document}
