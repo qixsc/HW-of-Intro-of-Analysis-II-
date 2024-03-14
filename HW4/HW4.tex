@@ -42,7 +42,10 @@
     since $f_k(0) = 0$ for all $k$, we can get $f(0) = 0$.
     Then, assume there exists an $x_0, x_1 \in (0, 1)$ s.t. $\dfrac{|f(x_0) - f(x_1)|}{|x_0 - x_1|} = \alpha > 1$.
     Take $\epsilon = \dfrac{\alpha-1}{3}$, there exists $N \in \mathbb{N}$ s.t. $|f(x) - f_k(x)| < \epsilon$ for all $x$ and $k > N$.
-    Thus, $|\dfrac{f_k(x_0) - f_k(x_1)}{x_0 - x_1}| = \dfrac{|f_k(x_0) - f(x_0) + f(x_0) - f(x_1) + f(x_1) - f_k(x_1)|}{|x_0 - x_1|} > \alpha - \dfrac{2\epsilon}{|x_0 - x_1|}$
+    Thus, $|\dfrac{f_k(x_0) - f_k(x_1)}{x_0 - x_1}| = \dfrac{|f_k(x_0) - f(x_0) + f(x_0) - f(x_1) + f(x_1) - f_k(x_1)|}{|x_0 - x_1|} > \alpha - \dfrac{2\epsilon}{|x_0 - x_1|} > 1$ 
+    which causes contradiction to $|f_k'(x)| \leq 1$ for all $x\in (0, 1)$.
+    Thus, $\dfrac{|f(x_0) - f(x_1)|}{|x_0 - x_1|} \leq 1\implies f\in B$.
+    Hence, $B$ is closed.
     
     Then, since $|f'(x)| \leq 1$ for all $f\in B$ and $x\in (0, 1)$.
     For any $\epsilon > 0$, we take $\delta < \epsilon$,
