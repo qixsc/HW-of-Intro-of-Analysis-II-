@@ -34,8 +34,15 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
-    \item Since $B$ is equicontinuous, for any $f_k \in B$ and $\epsilon > 0$, 
-    there exists $\delta > 0$ s.t. $|x - x_0| < \delta$ implies that $|f(x) - f(x_0)| < \dfrac{\epsilon}{2}$.
+    \item Since $B$ is equicontinuous, for any $f \in B$ and $\epsilon > 0$, 
+    there exists $\delta > 0$ s.t.  for any $x, y\in A$, $|x - y| < \delta$ implies that $|f(x) - f(y)| < \dfrac{\epsilon}{2}$.
+
+    \item First, since $|f'(x)| \leq 1$ for all $f\in B$ and $x\in (0, 1)$.
+    For any $\epsilon > 0$, we take $\delta < \epsilon$,
+    for any $x, y \in [0, 1]$ s.t. $|x - y| < \epsilon$, 
+    $|f(x) - f(y)| \leq 1 \cdot |x-y| = \delta < \epsilon$.
+    Thus, $B$ is equicontinuous.
+
 
 \end{enumerate}
 \end{document}
