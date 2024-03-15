@@ -76,8 +76,11 @@
     \end{align*}
 
 
-    \item Since $\mathfrak{F}$ is equicontinuous, for any $\epsilon > 0$, there exists $\delta > 0$ s.t. $\| x-y\| < \delta \implies |f(x) - f(y)| < \epsilon$.
-    
-    
+    \item Since $\mathfrak{F}$ is equicontinuous, for any $\epsilon > 0$, there exists $\delta > 0$ s.t. $\| x-y\| < \delta \implies |f(x) - f(y)| < \dfrac{\epsilon}{2}$ for all $f\in \mathfrak{F}$.
+    For all $x, y\in D$ and $\|x - y\| < \delta$, we want to show $|f^*(x) - f^*(y)| < \epsilon$.
+    First, if $f^*(x) > f^*(y)$, we can find a $f\in \mathfrak{F}$ s.t. $f^*(x) - f(x) < \dfrac{\epsilon}{2}$.
+    Then, $f^*(y) > f^*(x) - \dfrac{\epsilon}{2} - |f(x) - f(y)| > f^*(x) - \epsilon$.
+    For the other case, just change $x, y$ and get the same result.
+    Thus, $f^*$ is continuous.
 \end{enumerate}
 \end{document} 
