@@ -78,10 +78,11 @@
 
     \item Since $\mathfrak{F}$ is equicontinuous, for any $\epsilon > 0$, there exists $\delta > 0$ s.t. $\| x-y\| < \delta \implies |f(x) - f(y)| < \epsilon$.
     
-    Then, assume there exists $x \in D$ and  $x_k\in D$ s.t. $x_k$ converges to $x$ and $|f^*(x) - f^*(x_k)| = \alpha > \epsilon$ for all $k$(that means $f^*$ is discontinuous).
+    Then, assume there exists $x \in D$ and  $x_k\in D\cup D(x, \epsilon)$ s.t. $x_k$ converges to $x$ and $|f^*(x) - f^*(x_k)| = \alpha > \epsilon$ for all $k$(that means $f^*$ is discontinuous).
 
-    Since there exists $N\in \mathbb{N}$ s.t. $\| x_k - x\| < \delta$ for all $k > N$,
-    there exists $f_1\in \mathfrak{F}$ s.t. $f^*(x) - f_1(x) < \dfrac{\alpha - \epsilon}{2}$.
+    Since there exists $N\in \mathbb{N}$ s.t. $\| x_k - x\| < \delta$ for all $k > N$ and 
+    there exists $f_n\in \mathfrak{F}$ s.t. $f^*(x) - f_n(x) < \dfrac{1}{n}$,
+    $|f^*(x_k) - f_n(x_k)| \leq |f^*(x_k) - f^*(x)| + |f^*(x) - f_n(x)| + |f_n(x) - f_n(x_k)| < \alpha + \dfrac{1}{n} + \epsilon$.
 
 \end{enumerate}
 \end{document} 
