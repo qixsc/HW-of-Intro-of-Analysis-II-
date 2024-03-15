@@ -67,8 +67,12 @@
     Therefore, by Arzela-Ascoli Theorem, $B$ is compact.
 
     \item For any $\epsilon > 0$, we can find $\delta > 0$ s.t. $|x-y| < \delta\implies |f(x) - f(y)| < \epsilon$ for all $f$ and $x, y \in K$.
-    Since $K$ is compact, we can find a sequence $\{ x_k\}_{k=1}^n$ s.t. $K \subset D(x_k, \delta)$.
+    Since $K$ is compact, we can find a increasing sequence $\{ x_k\}_{k=1}^n$ s.t. $K \subset D(x_k, \dfrac{\delta}{2})$.
     Then, we can find a $N \in \mathbb{N}$ s.t. $|f_k(x_1) - f(x_1)| < \epsilon$ for all $k > N$.
-    Thus, for any $y \in K$, 
+    Thus, for any $y \in K$, $y \in x_l$ for some $l$, \begin{align*}
+        |f_k(y) - f(y)| &\leq |f_k(y) - f_k(x_l)| + |f_k(x_l) - f_k(x_{l-1})| + \cdot + |f_k(x_2) - f_k(x_1)|\\
+        & + |f_k(x_1) - f(x_1)| + |f(x_1) - f(x_2)| + \cdots + |f(x_l) - f(y)|\\
+        &< (2l+1)\epsilon
+    \end{align*}
 \end{enumerate}
 \end{document}
