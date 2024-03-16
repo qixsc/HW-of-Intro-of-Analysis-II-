@@ -65,11 +65,19 @@
     Thus, $B$ is pointwise compact.
 
     Therefore, by Arzela-Ascoli Theorem, $B$ is compact.
+    
+    \newpage
+    \item For any $\epsilon > 0$, there exists $\delta > 0$ s.t. $\| x-y\| < \delta \implies \| f_k(x) - f_k(y)\| < \dfrac{\epsilon}{3}$.
+    And since $K$ is compact, we can find finite $p\in N$ and $\{ x_k\}_{k=1}^p$ s.t. $K \subseteq \displaystyle\bigcup_{k=1}^p D(x_k, \delta)$.
+    Also, for all $x_k$, we can find a $N_{x_k}\in \mathbb{N}$ s.t. $|f_n(x_k) - f_m(x_k)| < \dfrac{\epsilon}{3}$ for all $n, m > N_{x_k}$.
 
-    \item For any $\epsilon > 0$, there exists $\delta > 0$ s.t. $\| x-y\| < \delta \implies \| f_k(x) - f_k(y)\| < \dfrac{\epsilon}{2}$.
-    Then, there exists $N \in \mathbb{N}$ s.t. $\| f(x) - f_k(x) \| < \dfrac{\epsilon}{2}$.
-    Since $K$ is compact, 
-
+    Then, we take $N = \displaystyle\max_{x\in [1, p]}\{ N_{x_k}\}$, and for any $x\in K$, we can find a $k\in [1, p]$ s.t. $x \in D(x_k, \delta)$.
+    Thus, \begin{align*}
+        |f_n(x) - f_m(x)| &\leq |f_n(x) - f_n(x_k)| + |f_n(x_k) - f_m(x_k)| + |f_m(x_k) - f_m(x)|\\
+        &< \dfrac{\epsilon}{3} + \dfrac{\epsilon}{3} + \dfrac{\epsilon}{3}\\
+        &= \epsilon
+    \end{align*}
+    Thus, by Cauchy Criterion, $f_k \to f$ uniformly.
 
     \item Since $\mathfrak{F}$ is equicontinuous, for any $\epsilon > 0$, there exists $\delta > 0$ s.t. $\| x-y\| < \delta \implies |f(x) - f(y)| < \dfrac{\epsilon}{2}$ for all $f\in \mathfrak{F}$.
     For all $x, y\in D$ and $\|x - y\| < \delta$, we want to show $|f^*(x) - f^*(y)| < \epsilon$.
