@@ -34,13 +34,12 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
-    \item Since $B_x$ are bounded on $\mathbb{R}^n$, $B_x$ is compact for all $x\in A$.
-    Thus, $B$ is pointwise compact.
+    \item Since $B \subset C(A, \mathbb{R}^n)$, $B_x$ is totally bounded.
+    From lemma mentioned in class, since $A$ is compact and $B_x$ is totally bounded, $B$ is totally bounded.
+    And since $B$ is equicontinuous, for all $\epsilon> 0$, there exists $\delta > 0$ s.t. $d(x, y) < \delta\implies \| f(x) - f(y) < \epsilon\|$ for all $f\in B$ and $x, y \in A$.
+    And we can find $\{ f_k\in A\}$ s.t. $B \subseteq \cup D(f_k, \epsilon)$.
 
-    And since $A$ is compact, $B \subset C(A, \mathbb{R}^n) = C_b(A, \mathbb{R}^n)$ which is complete.
-    Thus, $B$ is closed.
 
-    Then, by Arzela-Ascoli Theorem, $B$ is compact.
     Thus, every sequence in $B$ has uniformly convergent subsequence.
 
     \item First, we want to show that $B$ is closed.
