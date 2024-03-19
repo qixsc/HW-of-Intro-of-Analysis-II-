@@ -36,9 +36,12 @@
 \begin{enumerate}
     \item Since $B \subset C(A, \mathbb{R}^n)$, $B_x$ is totally bounded.
     From lemma mentioned in class, since $A$ is compact and $B_x$ is totally bounded, $B$ is totally bounded.
-    And since $B$ is equicontinuous, for all $\epsilon> 0$, there exists $\delta > 0$ s.t. $d(x, y) < \delta\implies \| f(x) - f(y) < \epsilon\|$ for all $f\in B$ and $x, y \in A$.
-    And we can find $\{ f_k\in A\}$ s.t. $B \subseteq \cup D(f_k, \epsilon)$.
-
+    And since $B$ is equicontinuous, for all $\epsilon> 0$, there exists $\delta > 0$ s.t. $d(x, y) < \delta\implies \| f(x) - f(y) < \dfrac{\epsilon}{2}\|$ for all $f\in B$ and $x, y \in A$.
+    Then, there exists $\{ x_i\in A\}$ s.t. $A\subseteq \cup D(x_i, \delta)$
+    and $\{ y_{i, j}\mid f(x_i) = y_{i, j}\text{ for some } f\in B\}$ s.t. $B_{x_i} \subseteq \cup D(y_{i, j}, \dfrac{\epsilon}{2})$.
+    Thus, for any sequence $f_k \in B$, $f_k(x_i)$ will have subsequence fall into a $D(y_{i, j}, \dfrac{\epsilon}{2})$ for $k$ is large.
+    We collect all of the $y_{i, j}$ for all $i$, and we can find a function $f$ s.t. $f(x_i) = y_{i, j}$ in $B$.
+    Then, for the subsequence and any $x\in A$, $\| f_k(x) - f(x)\| < \dfrac{\epsilon}{2} + \dfrac{\epsilon}{2} = \epsilon$.
 
     Thus, every sequence in $B$ has uniformly convergent subsequence.
 
