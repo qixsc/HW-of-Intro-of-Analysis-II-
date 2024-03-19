@@ -34,6 +34,13 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
-    \item 
+    \item \begin{enumerate}
+        \item If $x\in A$, $d(x, A) = \| x-x \| = 0$ and $d(x, B) = k > 0$, $\phi(x) = \dfrac{0}{0 + k} = 0$.
+        If $x\in B$, $d(x, A) = l > 0$ and $d(x, B) = 0$, $\phi(x) = \dfrac{l}{l + 0} = 1$.
+        If $x \notin A \wedge x \notin B$, $d(x, A) = l$ and $d(x, B) = k$, $\phi(x) = \dfrac{l}{l+k} < 1$ and is positive.
+        Thus, $0 \leq \phi(x) \leq 1$ for all $x \in \mathbb{R}^n$.
+
+        \item 
+    \end{enumerate}
 \end{enumerate}
 \end{document} 
