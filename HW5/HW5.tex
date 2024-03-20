@@ -48,8 +48,8 @@
     \item If $f$ has more than one fixed point, there exists $x, y\in S$ s.t. $d(f^n(x), f^n(y)) = d(x, y)$ for all $n\in\mathbb{N}$(contradiction to $a_n \to 0$).
     Then, we want to show that $f$ has fixed point.
     For any $x_0\in S$, we let $x_k = f^k(x)$.
-    Then, $d(x_n, x_{n-1}) \leq a_n d(x_1, x_0) \to 0$ as $n\to\infty$.
-
+    Then, $d(x_n, x_{n-k}) \leq a_{n-k} d(x_k, x_0) \to 0$ for any $k$ and $n\to\infty$.
+    Thus, $x_n \to x^*\in S$ is a fixed point of $f$.
 
     \item 
 \end{enumerate}
