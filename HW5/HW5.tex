@@ -51,6 +51,6 @@
     Then, $d(x_{n+k}, x_n) \leq a_n d(x_k, x_0) < \epsilon\cdot d(x_k, x_0)$ for any $k$ and $n > N$.
     Thus, $x_n \to x^*\in S$ by $S$ is complete, and $x^*$ is a fixed point of $f$.
 
-    \item Since $T(u)(t) = \displaystyle\int_a^t u(s) ds$, $T^m(u)(t) = T(T^{m-1}(u)(t)) = \displaystyle\int_{a}^{t} T^{m-1}(u)(s) ds$
+    \item Since $T(u)(t) = \displaystyle\int_a^t u(s)\ ds$, $T^2(u)(t) = T(T(u))(t) = \displaystyle\int_{a}^{t} T(u)(s)\ ds = \displaystyle\int_{a}^{t} \displaystyle\int_{a}^{s} u(x)\ dx\ ds = $
 \end{enumerate}
 \end{document} 
