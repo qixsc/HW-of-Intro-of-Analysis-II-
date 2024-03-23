@@ -39,11 +39,13 @@
         If $x\in B$, $d(x, A) = l > 0$ and $d(x, B) = 0$, $\phi(x) = \dfrac{l}{l + 0} = 1$.
         If $x \notin A \wedge x \notin B$, $d(x, A) = l$ and $d(x, B) = k$, $\phi(x) = \dfrac{l}{l+k} < 1$ and is positive.
 
-        And for $x, y \in A$ and $\| x- y \| < \delta$, $\phi(x)$
-        Thus, $0 \leq \phi(x) \leq 1$ for all $x \in \mathbb{R}^n$.
+        And for $x, y \in A$ and $\epsilon > 0$,
+        if $\| x- y \| < \delta = \epsilon$, 
+        $|\phi(x) - \phi(y)| < |\phi(x) - (\phi(x)+\delta)| = \epsilon$.
+        Thus, $0 \leq \phi(x) \leq 1$ is continuous for all $x \in \mathbb{R}^n$.
 
         \item Let $\phi(x) = (b-a)\dfrac{d(x, A)}{d(x, A) + d(x, B)} + a$.
-        From (a), we can get $\phi(x\in A) = (b-a)\cdot 0 + a = a$, $\phi(x\in B) = (b-a)\cdot 1 + a = b$,
+        From (a), we can get continuous funtion $\phi(x\in A) = (b-a)\cdot 0 + a = a$, $\phi(x\in B) = (b-a)\cdot 1 + a = b$,
         and $a \leq phi(x)\leq b$ for all $x\in A$.
     \end{enumerate}
 
