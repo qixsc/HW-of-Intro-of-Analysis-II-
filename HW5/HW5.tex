@@ -58,13 +58,13 @@
     Then, $d(x_{n+k}, x_n) \leq a_n d(x_k, x_0) < \epsilon\cdot d(x_k, x_0)$ for any $k$ and $n > N$.
     Thus, $x_n \to x^*\in S$ by $S$ is complete, and $x^*$ is a fixed point of $f$.
 
-    \item Since $T(u)(t) = \displaystyle\int_a^t u(s)\ ds$, assume $T^m(u)(t) = \displaystyle\int_{a}^{t}\dfrac{(t-s)^{m-1}}{(m-1)!} u(s)\ ds$.
+    \item Since $T(u)(t) = \displaystyle\int_a^t u(s)\ ds$, 
+    and $\left( T^m(u)(t)\right)' = \left( T(T^{m-1}(u))(t)\right)' = \left( \displaystyle\int_{a}^{t} T^{m-1}(u)(s) ds\right)' = T^{m-1}(u)(s)$ by FTC.
     Then, \begin{align*}
-        T^{m+1}(u)(t) &= T(T^m(u))(t)\\
-        &= \int_{a}^{t} T^m(u)(s)\ ds\\
-        &= \int_{a}^{t} \dfrac{1}{(m-1)!}\int_{a}^{s} (s-\tau)^{m-1} u(\tau)\ d\tau\ ds\\
-        &= \int_{a}^{t} \dfrac{1}{(m-1)!}\int_a^\tau (s-\tau)^{m-1} u(\tau)\ ds\ d\tau\\
-        &= \int_{a}^{t} \dfrac{1}{m!} (t-\tau)^m u(\tau)\ d\tau
+        T^{m}(u)(t) &= T(T^{m-1}(u))(t)\\
+        &= \int_{a}^{t} T^{m-1}(u)(s)\ ds\\
+        &= -\int_{a}^{t} T^{m-1}(u)(s)\ d(t-s)\\
+        &=
     \end{align*}
 
     Thus, by M.I., $T^m(u) = \dfrac{1}{(m-1)!}\displaystyle\int_{a}^{t} (t-s)^m u(s) ds \leq \displaystyle\int_{a}^{t} \dfrac{(t-s)^m}{(m-1)!} M\ ds$ 
