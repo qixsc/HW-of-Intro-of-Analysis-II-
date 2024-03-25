@@ -66,7 +66,12 @@
         &= \int_{a}^{t} T^{m-1}(u)(s)\ ds\\
         &= -\int_{a}^{t} T^{m-1}(u)(s)\ d(t-s)\\
         &= - (t-s) T^{m-1}(u)(s)\mid_a^t + \int_{a}^{t} (t-s)\ d(T^{m-1}(u)(s))\\
-        &=
+        &= \int_{a}^{t} (t-s)T^{m-1}(u)(s)\\
+        &= \int_{a}^{t} T^{m-1}(u)(s)\ d(\dfrac{-(t-s)^2}{2})\\
+        &= \int_{a}^{t} \dfrac{(t-s)^2}{2!} T^{m-2}(u)(s)\ ds\\
+        &\vdots\\
+        &= \int_{a}^{t} \dfrac{(t-s)^{m-1}}{(m-1)!} \ d(T(u)(s))\\
+        &= \int_{a}^{t} \dfrac{(t-s)^{m-1}}{(m-1)!} u(s) ds
     \end{align*}
 
     Thus, by M.I., $T^m(u) = \dfrac{1}{(m-1)!}\displaystyle\int_{a}^{t} (t-s)^m u(s) ds \leq \displaystyle\int_{a}^{t} \dfrac{(t-s)^m}{(m-1)!} M\ ds$ 
