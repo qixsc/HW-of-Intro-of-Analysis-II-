@@ -55,7 +55,7 @@
     \item If $f$ has more than one fixed point, there exists $x, y\in S$ s.t. $d(f^n(x), f^n(y)) = d(x, y)$ for all $n\in\mathbb{N}$(contradiction to $a_n \to 0$).
     Then, we want to show that $f$ has fixed point.
     For any $x_0\in S$, we let $x_k = f^k(x)$ and we can find a $N\in\mathbb{N}$ s.t. $a_n \leq \alpha < 1$ for all $n > N$.
-    Then, $d(x_{n+k}, x_n) \leq \alpha^{n-N} d(x_{N+k}, x_N) < \alpha^{n-N} \cdot a_N d(x_k, x_0)$ for any $k$ and $n > N$.
+    Then, $d(x_{n+k}, x_n) \leq \alpha^{n-N} d(x_{N+k}, x_N) < \alpha^{n-N} \cdot a_N\cdot d(x_k, x_0) \leq \alpha^{n-N}\cdot (a_N \cdot \left[\dfrac{k}{N}\right]\cdot \displaystyle\max_{i\in [0, N]}\{ d(x_i, x_0)\})$ for any $k$ and $n > N$.
     Thus, $x_n \to x^*\in S$ by $S$ is complete, and $x^*$ is a fixed point of $f$.
 
     \item Since $T(u)(t) = \displaystyle\int_a^t u(s)\ ds$, 
