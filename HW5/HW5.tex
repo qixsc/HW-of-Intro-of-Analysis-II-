@@ -41,11 +41,14 @@
 
         And for $x, y \in A$ and $\epsilon > 0$,
         if $\| x- y \| < \delta = \epsilon$, 
-        $|\phi(x) - \phi(y)| < |\phi(x) - (\phi(x)+\delta)| = \epsilon$.
-        Thus, $0 \leq \phi(x) \leq 1$ is continuous for all $x \in \mathbb{R}^n$.
+        $|d(x, A) - d(x, Y)| < \delta = \epsilon$.
+        Thus, $d(x, A)$ is continuous.
+        Using the same way, $d(x, B)$ is also continuous.
+        Since $\phi(x) = \dfrac{d(x, A)}{d(x, A)+d(x, B)}$ is a continuous function divided by a continuous function that greater than $0$,
+        $\phi(x)$ is also continuous.
 
         \item Let $\phi(x) = (b-a)\dfrac{d(x, A)}{d(x, A) + d(x, B)} + a$.
-        From (a), we can get continuous funtion $\phi(x\in A) = (b-a)\cdot 0 + a = a$, $\phi(x\in B) = (b-a)\cdot 1 + a = b$,
+        From (a), we can get continuous function $\phi(x\in A) = (b-a)\cdot 0 + a = a$, $\phi(x\in B) = (b-a)\cdot 1 + a = b$,
         and $a \leq phi(x)\leq b$ for all $x\in A$.
     \end{enumerate}
 
