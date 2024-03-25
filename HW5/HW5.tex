@@ -59,11 +59,13 @@
     Thus, $x_n \to x^*\in S$ by $S$ is complete, and $x^*$ is a fixed point of $f$.
 
     \item Since $T(u)(t) = \displaystyle\int_a^t u(s)\ ds$, 
-    and $\left( T^m(u)(t)\right)' = \left( T(T^{m-1}(u))(t)\right)' = \left( \displaystyle\int_{a}^{t} T^{m-1}(u)(s) ds\right)' = T^{m-1}(u)(s)$ by FTC.
-    Then, \begin{align*}
+    $\left( T^m(u)(t)\right)' = \left( T(T^{m-1}(u))(t)\right)' = \left( \displaystyle\int_{a}^{t} T^{m-1}(u)(s) ds\right)' = T^{m-1}(u)(s)$ by FTC.
+    And since $T^m(u)(a) = 0$ for all $m\in \mathbb{N}$,
+    then we can get \begin{align*}
         T^{m}(u)(t) &= T(T^{m-1}(u))(t)\\
         &= \int_{a}^{t} T^{m-1}(u)(s)\ ds\\
         &= -\int_{a}^{t} T^{m-1}(u)(s)\ d(t-s)\\
+        &= - (t-s) T^{m-1}(u)(s)\mid_a^t + \int_{a}^{t} (t-s)\ d(T^{m-1}(u)(s))\\
         &=
     \end{align*}
 
