@@ -84,7 +84,11 @@
 
     \item Since there exists $P_n$ is polynomial on $[0, 1]$ with degree $n$ and $P_n \to f$,
     \begin{align*}
-        \int_{0}^{1}
+        \left|\int_{0}^{1} (f(x))^2 dx\right| &\leq \left| \int_{0}^{1} (f(x))^2 - f(x)P_n(x) + f(x)P_n(x)\ dx\right|\\
+        &\leq \max |f(x)| \cdot \int_{0}^{1} f(x)P_n(x)\ dx\\
+        &= 0
     \end{align*}
+
+    Then, since $(f(x))^2 \geq 0$ for all $x$, we get $f(x) = 0$ for all $x\in [0, 1]$.
 \end{enumerate}
 \end{document} 
