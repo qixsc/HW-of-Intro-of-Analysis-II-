@@ -54,9 +54,13 @@
 
     \item If $f$ has more than one fixed point, there exists $x, y\in S$ s.t. $d(f^n(x), f^n(y)) = d(x, y)$ for all $n\in\mathbb{N}$(contradiction to $a_n \to 0$).
     Then, we want to show that $f$ has fixed point.
-    For any $x_0\in S$ and $\epsilon > 0$, we let $x_k = f^k(x)$ and we can find a $N\in\mathbb{N}$ s.t. $a_n \leq \alpha < \dfrac{\epsilon}{d(x_1, x_0)}$ for all $n > N$.
-    Then, for any $m > n > N$, $d(x_m, x_n) \leq \displaystyle\sum_{k=0}^{m-n-1} d(x_{n+k+1}, x_{n+k}) \leq \displaystyle\sum_{k=0}^{m-n-1} a_{n+k}\cdot d(x_1, x_0)$.
-    Thus, $x_n \to x^*\in S$ by $S$ is complete, and $x^*$ is a fixed point of $f$.
+    Since $a_n\to 0$, we can find an $N\in \mathbb{N}$ s.t. $d(f^N(x), f^N(y)) \leq a d(x, y)$ for $a<1$.
+    Thus, $f^N$ is a contraction mapping.
+    Take $x^*$ be fixed point of $f^N$, that is, $f^N(x^*) = x^*$.
+    Then, since $f^{N+1}(x^*) = f(f^N(x^*)) = f(x^*)$ and $f^{N+1} = f^N(f(x^*))$,
+    $f(x^*) = f^N(f(x^*))$ is fixed point of $f^N$.
+    Since $f^N$ has unique fixed point, $f(x^*) = x^*$.
+    Thus, $f$ has unique fixed point.
 
     \item Since $T(u)(t) = \displaystyle\int_a^t u(s)\ ds$, 
     $\left( T^m(u)(t)\right)' = \left( T(T^{m-1}(u))(t)\right)' = \left( \displaystyle\int_{a}^{t} T^{m-1}(u)(s) ds\right)' = T^{m-1}(u)(t)$ by the FTC.
