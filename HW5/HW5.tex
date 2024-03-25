@@ -44,18 +44,18 @@
         $|d(x, A) - d(x, Y)| < \delta = \epsilon$.
         Thus, $d(x, A)$ is continuous.
         Using the same way, $d(x, B)$ is also continuous.
-        Since $\phi(x) = \dfrac{d(x, A)}{d(x, A)+d(x, B)}$ is a continuous function divided by a continuous function that greater than $0$,
+        Since $\phi(x) = \dfrac{d(x, A)}{d(x, A)+d(x, B)}$ is a continuous function divided by a continuous function which is greater than $0$,
         $\phi(x)$ is also continuous.
 
         \item Let $\phi(x) = (b-a)\dfrac{d(x, A)}{d(x, A) + d(x, B)} + a$.
         From (a), we can get continuous function $\phi(x\in A) = (b-a)\cdot 0 + a = a$, $\phi(x\in B) = (b-a)\cdot 1 + a = b$,
-        and $a \leq phi(x)\leq b$ for all $x\in A$.
+        and $a \leq \phi(x)\leq b$ for all $x\in A$.
     \end{enumerate}
 
     \item If $f$ has more than one fixed point, there exists $x, y\in S$ s.t. $d(f^n(x), f^n(y)) = d(x, y)$ for all $n\in\mathbb{N}$(contradiction to $a_n \to 0$).
     Then, we want to show that $f$ has fixed point.
-    For any $x_0\in S$, we let $x_k = f^k(x)$ and we can find a $N\in\mathbb{N}$ s.t. $a_n < \epsilon$ for all $n > N$.
-    Then, $d(x_{n+k}, x_n) \leq a_n d(x_k, x_0) < \epsilon\cdot d(x_k, x_0)$ for any $k$ and $n > N$.
+    For any $x_0\in S$, we let $x_k = f^k(x)$ and we can find a $N\in\mathbb{N}$ s.t. $a_n \leq \alpha < 1$ for all $n > N$.
+    Then, $d(x_{n+k}, x_n) \leq \alpha^{n-N+1} d(x_{N+k}, x_N)$ for any $k$ and $n > N$.
     Thus, $x_n \to x^*\in S$ by $S$ is complete, and $x^*$ is a fixed point of $f$.
 
     \item Since $T(u)(t) = \displaystyle\int_a^t u(s)\ ds$, 
