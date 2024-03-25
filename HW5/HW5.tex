@@ -74,10 +74,9 @@
         &= \int_{a}^{t} \dfrac{(t-s)^{m-1}}{(m-1)!} u(s)\ ds
     \end{align*}
 
-    Thus, $T^m(u) = \dfrac{1}{(m-1)!}\displaystyle\int_{a}^{t} (t-s)^m u(s) ds \leq \displaystyle\int_{a}^{t} \dfrac{(t-s)^m}{(m-1)!} M\ ds \leq \displaystyle\int_{a}^{t} \dfrac{M\cdot (t-a)^m}{(m-1)!}\ ds$
-    with $M$ is upper bound of $u$.
-
-    Thus, $T$ has unique fixed point by 2., and $T(0) = 0$ trivially.
+    Thus, $T^m(u) = \dfrac{1}{(m-1)!}\displaystyle\int_{a}^{t} (t-s)^{m-1} u(s) ds \leq \displaystyle\int_{a}^{t} \dfrac{(t-s)^{m-1}}{(m-1)!} M\ ds \leq \displaystyle\int_{a}^{t} \dfrac{M\cdot (t-a)^{m-1}}{(m-1)!}\ ds$
+    with $M$ is upper bound of $u$. Then, taking $a_n = \dfrac{(t-a)^n}{(n-1)!}M$.
+    Therefore, by 2., $T$ has unique fixed point, and $T(0) = 0$ trivially.
 
     \item We want to proof $T(f)(x) = \displaystyle\int_0^x f(t)t\ dt$ has unique fixed point.
     
