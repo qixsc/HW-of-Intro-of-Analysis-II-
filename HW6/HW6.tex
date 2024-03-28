@@ -41,6 +41,13 @@
     Thus, there exists $h(x) = \tan(g(x))$ in $C(\mathbb{R}^n, \mathbb{R})$ and $h(x) = f(x)$ for all $x\in D$ by 
     $\phi(x)$ is invertible.
 
-    \item We want to show that $\displaystyle\lim_{h\to 0} \dfrac{\| f(x+h) - f(x) - h\cdot Df(x)\|}{h}$ exists for all $x$.
+    \item Since $\dfrac{\partial f_i}{\partial x}$ exists for all $x$ and all $i$, 
+    we get the Jacobian matrix $$\left[J(x)\right] = \begin{bmatrix}
+        \dfrac{\partial f_1}{\partial x}(x)\\
+        \dfrac{\partial f_2}{\partial x}(x)\\
+        \vdots\\
+        \dfrac{\partial f_m}{\partial x}(x)\\
+    \end{bmatrix}.$$
+    Then, we want to show that $J = Df$.
 \end{enumerate}
 \end{document} 
