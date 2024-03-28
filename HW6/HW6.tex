@@ -34,6 +34,13 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
+    \item Let $\phi(x) = \arctan(x)$, then $\phi \circ f(x) = \phi(f(x))$ is bdd by $(-\dfrac{\pi}{2}, \dfrac{\pi}{2})$.
+    Then, by Tietze's Extension Theorem, there exists $g \in C(\mathbb{R}^n, \mathbb{R})$ s.t. 
+    $g(x) = \phi(f(x))$ for all $x\in D$ and $\sup|g(x)| = \sup |\phi(f(x))|\leq \dfrac{\pi}{2}$.
+
+    Thus, there exists $h(x) = \tan(g(x))$ in $C(\mathbb{R}^n, \mathbb{R})$ and $h(x) = f(x)$ for all $x\in D$ by 
+    $\phi(x)$ is invertible.
+
     \item 
 \end{enumerate}
 \end{document} 
