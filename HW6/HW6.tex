@@ -50,8 +50,13 @@
     \end{bmatrix}.$$
     Then, we want to show that $J = Df$.
     For any $x$ and any $i$, \begin{align*}
-        \lim_{h\to 0} \dfrac{|f_i(x+h) - f_i(x) - J_i(x)(h)|}{|h|} = \lim_{h\to 0} \dfrac{|f_i(x+h) - f_i(x) - \lim_{k\to 0}\dfrac{f_i(x+k) - f_i(x)}{k}(h)|}{|h|}
+        \lim_{h\to 0} \dfrac{|f_i(x+h) - f_i(x) - J_i(x)(h)|}{|h|} &= \lim_{h\to 0} \dfrac{|f_i(x+h) - f_i(x) - \displaystyle\lim_{k\to 0}\dfrac{|f_i(x+k) - f_i(x)|}{|k|}(h)|}{|h|}\\
+        &= \lim_{h\to 0} \dfrac{|f_i(x+h) - f_i(x) - f_i(x+h) + f_i(x)|}{|h|}\\
+        &= 0.
     \end{align*}
-    
+    Thus, $J(x) = Df(x)$ for all $x$.
+    Therefore, $Df$ exists.
+
+    \item 
 \end{enumerate}
 \end{document} 
