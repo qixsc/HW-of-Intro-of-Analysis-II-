@@ -55,7 +55,18 @@
     = \dfrac{\| (0, 0, \cdots, 0)\|}{|h|} = 0$.
     Therefore, $Df = J$ exists.
 
-    \item Since the partial derivative are all bdd, we can find an $M$ s.t. $M$ is an upper bound of all partial derivative.
-    
+    \item Since the partial derivative are all bdd, we can find a $M$ s.t. $M$ is an upper bound of all partial derivative.
+    Then, for all $\epsilon > 0$, take $\delta = \dfrac{\epsilon}{n \cdot M}$.
+    Thus, for any $\|x - y\| < \delta$, \begin{align*}
+        \| f(x) - f(y) \| &= \| f((x_1, x_2, \cdots, x_n)) - f((y_1, y_2, \cdots, y_n))\| \\
+        &\leq \| f(x_1, x_2, \cdots, x_n) - f(y_1, x_2, \cdots, y_n)\|\\
+        &+ \| f(y_1, x_2, \cdots, y_n) - f(y_1, y_2, \cdots, y_n)\|\\
+        &+ \cdots\\
+        &+ \|f(y_1, y_2, \cdots, x_n) - f(y_1, y_2, \cdots, y_n)\|\\
+        &= \sum_{i=1}^{n} |x_i - y_i|\cdot \dfrac{\partial f}{\partial x_i}\\
+        &\leq n \cdot \delta \cdot M = \epsilon
+    \end{align*}
+
+    Therefore, $f$ is continuous.
 \end{enumerate}
 \end{document} 
