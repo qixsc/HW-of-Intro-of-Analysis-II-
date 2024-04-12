@@ -34,9 +34,12 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
-    \item $f_x(0, 0) = \displaystyle\lim_{x\to 0} \dfrac{|f(x, 0) - f(0)|}{|x|} = \displaystyle\lim_{x\to 0} \dfrac{|x\cdot 0(x^2-0^2)/(x^2+0^2)|}{|x|} = 0$ exists.
+    \item $f_x(0, 0) = \displaystyle\lim_{x\to 0} \dfrac{f(x, 0) - f(0)}{x} = \displaystyle\lim_{x\to 0} \dfrac{x\cdot 0(x^2-0^2)/(x^2+0^2)}{x} = 0$ exists.
     Also, we can esaily get that $f_y(0, 0) = 0$.
+    Then, $f_{xy}(0, 0) = \dfrac{\partial f_x}{\partial y}(0, 0) = \displaystyle\lim_{y\to 0} \dfrac{y(0^4+4\cdot 0^2y^2 - y^4)/(0^2 + y^2)^2}{y} = \displaystyle\lim_{y\to 0} \dfrac{-y^4}{y^4} = -1$.
+    And, $f_{yx}(0, 0) = 1$.
+    Therefore, $f_{xy}(0, 0) \neq f_{y}(0, 0)$.
 
-    Then, $f_{xy}(0, 0) = \dfrac{\partial f_x}{\partial y}(0, 0) = \dfrac{\partial}{\partial y}$
+    \item 
 \end{enumerate}
 \end{document} 
