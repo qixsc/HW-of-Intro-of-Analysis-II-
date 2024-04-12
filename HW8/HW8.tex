@@ -48,10 +48,10 @@
     Thus, 
     \begin{align*}
         |f(b) - f(a) - \int_{0}^{1} Df(tb + (1-t)a)(b - a)\ dt| &\leq \sum_{k=1}^{n+1} \|f(x_k) - f(x_{k-1}) - \int_{0}^{1} Df(tx_k + (1-t)x_{k-1})(b-a) dt\|\\
-        &= \sum_{k=1}^{n+1} \| f(x_k) - f(x_{k-1}) - \int_{0}^{1} Df(x_k) (b-a) dt\|\\
-        &\leq \sum_{k=1}^{n+1} \| f(x_k) - f(x_{k-1}) - \int_{0}^{1} Df(c_k) (b-a) dt\|\\
-         &+ \| \int_{0}^{1} (Df(c_k) - Df(x_k))(b-a) dt\|\\
-        &\leq \dfrac{\epsilon}{b-a}(b-a) = \epsilon
+        &= \sum_{k=1}^{n+1} \| \int_{0}^{1} Df(c_k)(x_k - x_{k-1})\ dt\\
+        &- \int_{0}^{1} Df(tx_k + (1-t)x_{k-1})(b-a)\ dt\|\\
+        &< \dfrac{\epsilon}{b-a} (b-a)\\
+        &= \epsilon
     \end{align*}
 
     Therefore, $f(b) = f(a) = \int_{0}^{1} Df(tb + (1-t)a)(b-a)\ dt$.
