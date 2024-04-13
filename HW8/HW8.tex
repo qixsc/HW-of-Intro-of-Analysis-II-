@@ -41,15 +41,14 @@
     Therefore, $f_{xy}(0, 0) \neq f_{y}(0, 0)$.
 
     \item Since $Df$ is continuous on $S$, for any $\epsilon > 0$, there exists $\delta > 0$ s.t. $\| f(x) - f(y)\| < \dfrac{\epsilon}{\|b-a\|}$ if $\| x - y\| < \delta$.
-    And since $S$ is a closed line in $R^p$, we can find a sequence $\{ x_k\}_{k=1}^n$ s.t. $D(x_k, \dfrac{\delta}{2}) \supseteq S$ and $\|x_k+1 - a\| > \| x_k - a\|$.
-    Let $x_0 = a$ and $x_{n+1} = b$.
-    Then, by MCT, $Df(x_1) - Df(a) = Df(c_1)(x_1 - a)$ for $c_1$ on the line between $a, x_1$ and $c_k$ on the line between $x_k, x_k-1$.
-
+    And since $S$ is a closed line in $R^p$, we can find a sequence $\{ x_k\}_{k=1}^n$ s.t. $D(x_k, \dfrac{\delta}{2}) \supseteq S$ and $\|x_{k+1} - a\| > \| x_k - a\|$.
+    Let $x_0 = a$ and $x_{n+1} = b$ and $x_k = a + t_k(b-a)$.
+    Then, by MCT, $Df(x_k) - Df(x_{k-1}) = Df(c_k)(x_k - x_{k-1})$ for $c_k$ on the line between $x_k, x_{k-1}$.
     Thus, 
     \begin{align*}
-        |f(b) - f(a) - \int_{0}^{1} Df(a + t(b-a))(b - a)\ dt| &\leq \sum_{k=1}^{n+1} \|f(x_k) - f(x_{k-1}) - \int_{0}^{1} Df(x_k + t(x_k-x_{k-1}))(b-a) dt\|\\
-        &= \sum_{k=1}^{n+1} \| \int_{0}^{1} Df(c_k)(x_k - x_{k-1})\ dt\\
-        &- \int_{0}^{1} Df(tx_k + (1-t)x_{k-1})(b-a)\ dt\|\\
+        |f(b) - f(a) - \int_{0}^{1} Df(a + t(b-a))(b - a)dt| &\leq \sum_{k=1}^{n+1} \|f(x_k) - f(x_{k-1}) - \int_{t_{k-1}}^{t_k} Df(a + t(b-a))(b-a) dt\|\\
+        &= \sum_{k=1}^{n+1} \| Df(c_k)(x_k - x_{k-1})\\
+        & - \int_{t_{k-1}}^{t_k} Df(tx_k + (1-t)x_{k-1})(b-a)\ dt\|\\
         &< \dfrac{\epsilon}{b-a} (b-a)\\
         &= \epsilon
     \end{align*}
