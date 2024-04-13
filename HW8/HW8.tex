@@ -49,12 +49,14 @@
         |f(b) - f(a) - \int_{0}^{1} Df(a + t(b-a))(b - a)dt| &\leq \sum_{k=1}^{n+1} \|f(x_k) - f(x_{k-1}) - \int_{t_{k-1}}^{t_k} Df(a + t(b-a))(b-a) dt\|\\
         &= \sum_{k=1}^{n+1} \| Df(c_k)(x_k - x_{k-1})\\
         & - \int_{t_{k-1}}^{t_k} Df(a +t(b-a))(b-a)\ dt\|\\
-        &< \dfrac{\epsilon}{b-a} (b-a)\\
+        &= \sum_{k=1}^{n+1} \| \int_{t_{k-1}}^{t_k} Df(c_k)(b-a) - Df(a+t(b-a))(b-a)dt\|\\
+        &= \sum_{k=1}^{n+1} \dfrac{\epsilon(t_k - t_{k-1})}{\| (b-a)\|}\\
         &= \epsilon
     \end{align*}
 
     Therefore, $f(b) = f(a) = \displaystyle\int_{0}^{1} Df(tb + (1-t)a)(b-a)\ dt$.
 
+    \newpage
     \item $\displaystyle\lim_{u \to 0} \dfrac{\|g(x+u) - g(x) - Dg(x)(u)\|}{\| u\|} = \displaystyle\lim_{u\to 0} \dfrac{\|g(x) + g(u) + B(x, u) + B(u, x) - g(x) - Dg(x)(u) \|}{\| u\|} = 0$.
     
     \item Since $\dfrac{\partial^2 f}{\partial x\partial y}$ exists, 
