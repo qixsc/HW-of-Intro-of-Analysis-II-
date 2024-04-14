@@ -50,8 +50,8 @@
         &= \sum_{k=1}^{n+1} \| Df(c_k)(x_k - x_{k-1})\\
         & - \int_{t_{k-1}}^{t_k} Df(a +t(b-a))(b-a)\ dt\|\\
         &= \sum_{k=1}^{n+1} \| \int_{t_{k-1}}^{t_k} Df(c_k)(b-a) - Df(a+t(b-a))(b-a)dt\|\\
-        &= \sum_{k=1}^{n+1} \dfrac{\epsilon(t_k - t_{k-1})}{\| (b-a)\|}\\
-        &< \epsilon
+        &= \sum_{k=1}^{n+1} \epsilon(t_k - t_{k-1})\\
+        &= \epsilon
     \end{align*}
 
     Therefore, $f(b) = f(a) = \displaystyle\int_{0}^{1} Df(tb + (1-t)a)(b-a)\ dt$.
