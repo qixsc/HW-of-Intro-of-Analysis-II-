@@ -61,9 +61,9 @@
     
     \item For any $x_0, y_0 \in \mathbb{R}$, $f(x_0, y_0), f_x(x_0, y_0), f_y(x_0, y_0), f_{xy}(x_0, y_0)$ are all continuous.
     Then, \begin{align*}
-        \lim_{h\to 0} \left|\dfrac{f_y(x_0+h, y_0) - f_y(x_0, y_0)}{h}\right| &= \lim_{h, k\to 0} \dfrac{1}{|h|}\left|\dfrac{f(x_0 + h, y_0 + k) - f(x_0 + h, y_0)}{k} - \dfrac{f(x_0, y_0 + k) - f(x_0, y_0)}{k}\right|\\
-        &= \lim_{h, k\to 0} \dfrac{1}{|k|}\left|\dfrac{f(x_0 + h, y_0+k) - f(x_0, y_0 + k)}{h} - \dfrac{f(x_0+h, y_0) - f(x_0, y_0)}{h}\right|\\
-        &= \lim_{k\to 0} \left|\dfrac{f_x(x_0, y_0+k) - f_x(x_0, y_0)}{k}\right|\\
+        \lim_{h\to 0} \dfrac{f_y(x_0+h, y_0) - f_y(x_0, y_0)}{h} &= \lim_{h, k\to 0} \dfrac{1}{h}\dfrac{f(x_0 + h, y_0 + k) - f(x_0 + h, y_0)}{k} - \dfrac{f(x_0, y_0 + k) - f(x_0, y_0)}{k}\\
+        &= \lim_{h, k\to 0} \dfrac{1}{k}\dfrac{f(x_0 + h, y_0+k) - f(x_0, y_0 + k)}{h} - \dfrac{f(x_0+h, y_0) - f(x_0, y_0)}{h}\\
+        &= \lim_{k\to 0} \dfrac{f_x(x_0, y_0+k) - f_x(x_0, y_0)}{k}\\
         &= f_{xy}(x_0, y_0)
     \end{align*}
 
