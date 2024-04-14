@@ -59,12 +59,14 @@
     \newpage
     \item $\displaystyle\lim_{u \to 0} \dfrac{\|g(x+u) - g(x) - Dg(x)(u)\|}{\| u\|} = \displaystyle\lim_{u\to 0} \dfrac{\|g(x) + g(u) + B(x, u) + B(u, x) - g(x) - Dg(x)(u) \|}{\| u\|} = 0$.
     
-    \item For any $(x_0, y_0)\in \mathbb{R}^2$ and $\epsilon > 0$, we can find small enough $h, k$ s.t. $|f_{xy}(x_0, y_0) - \dfrac{f_x(x_0, y_0 + k) - f_x(x_0, y_0)}{k}| < \epsilon$ and so as $f_x(x_0, y_0)$ and $f_y(x_0, y_0)$.
-
+    \item For any $x_0, y_0 \in \mathbb{R}$, $f(x_0, y_0), f_x(x_0, y_0), f_y(x_0, y_0), f_{xy}(x_0, y_0)$ are all continuous.
     Then, \begin{align*}
-        |\dfrac{f_y(x_0+h, y_0) - f_y(x_0, y_0)}{h}| &\leq \dfrac{1}{|h|}\cdot \left|\dfrac{f(x_0+h, y_0 + k) - f(x_0+h, y_0)}{k} - \dfrac{f(x_0, y_0 + k) - f(x_0, y_0)}{k}\right| + 2\dfrac{\epsilon}{|h|}\\
-        &\leq \dfrac{2\epsilon + 2|k|\epsilon}{|h||k|} + \dfrac{1}{|k|}\left(\left| \dfrac{f(x_0 + h, y_0 + k) - f(x_0, y_0 + k)}{h} - \dfrac{f(x_0+ h, y_0) - f(x_0, y_0)}{h}\right|\right)\\
-        &\leq \dfrac{2}{\epsilon} + \dfrac{1}{|k|}
+        \lim_{h\to 0} \left|\dfrac{f_y(x_0+h, y_0) - f_y(x_0, y_0)}{h}\right| &= \lim_{h, k\to 0} \dfrac{1}{|h|}\left|\dfrac{f(x_0 + h, y_0 + k) - f(x_0 + h, y_0)}{k} - \dfrac{f(x_0, y_0 + k) - f(x_0, y_0)}{k}\right|\\
+        &= \lim_{h, k\to 0} \dfrac{1}{|k|}\left|\dfrac{f(x_0 + h, y_0+k) - f(x_0, y_0 + k)}{h} - \dfrac{f(x_0+h, y_0) - f(x_0, y_0)}{h}\right|\\
+        &= \lim_{k\to 0} \left|\dfrac{f_x(x_0, y_0+k) - f_x(x_0, y_0)}{k}\right|\\
+        &= f_{xy}(x_0, y_0)
     \end{align*}
+
+    Thus, $f_{yx}$ exists and $f_{yx} = f_{xy}$.
 \end{enumerate}
 \end{document} 
