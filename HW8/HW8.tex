@@ -65,7 +65,9 @@
     $\dfrac{\partial f}{\partial x}(x_0+h, y_0), \dfrac{\partial f}{\partial x}(x_0+h, y_0+k)$
     are all exists and
     
-    $\left| \dfrac{f_x(x_0 + h, y_0+k) - f_x(x_0+h, y_0)}{k} - \dfrac{f_x(x_0, y_0+k) - f_x(x_0, y_0)}{k}\right| < \epsilon$.
-    
+    $\left| (f_x(x_0 + h, y_0+k) - f_x(x_0+h, y_0)) - (f_x(x_0, y_0+k) - f_x(x_0, y_0))\right| < \epsilon|k|$.
+
+    And since $f \in C^1(\mathbb{R}^2, \mathbb{R})$, $|f_x(x_0, y_0)| < |\dfrac{f(x_0+h, y_0) - f(x_0, y_0)}{h}|+\epsilon$.
+
 \end{enumerate}
 \end{document} 
