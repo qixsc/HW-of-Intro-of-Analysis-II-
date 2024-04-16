@@ -57,21 +57,14 @@
     Therefore, $f(b) - f(a) = \displaystyle\int_{0}^{1} Df(tb + (1-t)a)(b-a)\ dt$.
 
     \newpage
-    \item Since $B$ is bilinear, $g(x + u) = B(x+u, x+u) = B(x, x+u) + B(u, x+u) = B(x, x) + B(x, u) + B(u, x) + B(u, u) = g(x) + g(u) + (B(u, x) + B(x, u))$.
-    And since $B$ is bilinear, $B(0, 0) = 0$ and $g(0) = 0$.
-
-    For any $x, u\in \mathbb{R}^p$ and any $\epsilon > 0$, we can find an $c\in \mathbb{R}$ s.t. $\|g(x+u') - g(x) - Dg(x)(u')\| \leq \epsilon \| u'\|$ where $u = cu'$.
-    Thus, \begin{align*}
-        \| B(x, u) + B(u, x) - Dg(x)(u)\| &= \| cB(x, u') + cB(u', x) - cDg(x)(u')\|\\
-        &\leq c(\| g(x) + g(u') + B(x, u') + B(u', x) - g(x) - Dg(x)(u')\| + \| g(u')\|)\\
-        &= c(\| g(x+u') - g(x) - Dg(x)(u')\| + \| g(u')\|)\\
-        &\leq c(\epsilon\|u'\| + \| g(u')\|)\\
-        &= \epsilon\| u\| + \dfrac{1}{c}\| g(u)\|
+    \item Since $u\in \mathbb{R}^p$, $y = a_1e_1 + a_2e_2 + \cdots + a_pe_p$.
+    Then, \begin{align*}
+        Dg(x)(u_ie_i) &= u_i\cdot \lim_{h\to 0}\dfrac{g(x+he_i) - g(x)}{h}\\
+        &= u_i\cdot \lim_{h\to 0} \dfrac{B(x, he_i) + B(he_i, x) + g(he_i)}{h}\\
+        &= u_i(B(x, e_i) + B(e_i, x))\\
+        &= B(u_i, x) + B(x, u_i)
     \end{align*}
-
-    Therefore, for $\epsilon$ is very tiny, $c$ will be very large, then $\| B(x, u) + B(u, x) - Dg(x)(u)\|\to 0$ implies that 
-    $B(x, u) + B(u, x) = Dg(x)(u)$.
-    Using the same way, we can proof $Dg(u)(x) = B(x, u) + B(u, x) = Dg(x)(u)$.
+    Thus, $Dg(x)(u) = B(x, u) + B(u, x)$ and using the same way can get $Dg(u)(x) = B(x, u) + B(u, x)$.
     
     
     \item For any $x_0, y_0 \in \mathbb{R}$, $f(x_0, y_0), f_x(x_0, y_0), f_y(x_0, y_0), f_{xy}(x_0, y_0)$ are all continuous.
