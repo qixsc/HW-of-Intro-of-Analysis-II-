@@ -57,7 +57,14 @@
     Therefore, $f(b) = f(a) = \displaystyle\int_{0}^{1} Df(tb + (1-t)a)(b-a)\ dt$.
 
     \newpage
-    \item $\displaystyle\lim_{u \to 0} \dfrac{\|g(x+u) - g(x) - Dg(x)(u)\|}{\| u\|} = \displaystyle\lim_{u\to 0} \dfrac{\|g(x) + g(u) + B(x, u) + B(u, x) - g(x) - Dg(x)(u) \|}{\| u\|} = 0$.
+    \item Since $B$ is bilinear, $g(x + u) = B(x+u, x+u) = B(x, x+u) + B(u, x+u) = B(x, x) + B(x, u) + B(u, x) + B(u, u) = g(x) + g(u) + (B(u, x) + B(x, u))$.
+    
+    And since $B$ is bilinear, $B(0, 0) = 0$ and $g(0) = 0$.
+
+    Then, for any $x, u\in \mathbb{R}^p$ and $\epsilon > 0$, 
+    we can find $u' = \alpha u$ s.t. $\| u'\| < \epsilon$.
+    Thus, $Dg(x)(u) = \dfrac{1}{\alpha} Dg(x)(u') = \dfrac{1}{\alpha}(\dfrac{}{})$
+    
     
     \item For any $x_0, y_0 \in \mathbb{R}$, $f(x_0, y_0), f_x(x_0, y_0), f_y(x_0, y_0), f_{xy}(x_0, y_0)$ are all continuous.
     Then, \begin{align*}
