@@ -38,12 +38,12 @@
     Also, we can esaily get that $f_y(0, 0) = 0$.
     Then, $f_{xy}(0, 0) = \dfrac{\partial f_x}{\partial y}(0, 0) = \displaystyle\lim_{y\to 0} \dfrac{y(0^4+4\cdot 0^2y^2 - y^4)/(0^2 + y^2)^2}{y} = \displaystyle\lim_{y\to 0} \dfrac{-y^4}{y^4} = -1$.
     And, $f_{yx}(0, 0) = 1$.
-    Therefore, $f_{xy}(0, 0) \neq f_{y}(0, 0)$.
+    Therefore, $f_{xy}(0, 0) \neq f_{yx}(0, 0)$.
 
     \item Since $Df$ is continuous on $S$, for any $\epsilon > 0$, there exists $\delta > 0$ s.t. $\| f(x) - f(y)\| < \dfrac{\epsilon}{\|b-a\|}$ if $\| x - y\| < \delta$.
     And since $S$ is a closed line in $R^p$, we can find a sequence $\{ x_k\}_{k=1}^n$ s.t. $D(x_k, \dfrac{\delta}{2}) \supseteq S$ and $\|x_{k+1} - a\| > \| x_k - a\|$.
     Let $x_0 = a$ and $x_{n+1} = b$ and $x_k = a + t_k(b-a)$.
-    Then, by MCT, $Df(x_k) - Df(x_{k-1}) = Df(c_k)(x_k - x_{k-1})$ for $c_k$ on the line between $x_k, x_{k-1}$.
+    Then, by MVT, $Df(x_k) - Df(x_{k-1}) = Df(c_k)(x_k - x_{k-1})$ for $c_k$ on the line between $x_k, x_{k-1}$.
     Thus, 
     \begin{align*}
         |f(b) - f(a) - \int_{0}^{1} Df(a + t(b-a))(b - a)dt| &\leq \sum_{k=1}^{n+1} \|f(x_k) - f(x_{k-1}) - \int_{t_{k-1}}^{t_k} Df(a + t(b-a))(b-a) dt\|\\
@@ -54,15 +54,15 @@
         &= \epsilon
     \end{align*}
 
-    Therefore, $f(b) = f(a) = \displaystyle\int_{0}^{1} Df(tb + (1-t)a)(b-a)\ dt$.
+    Therefore, $f(b) - f(a) = \displaystyle\int_{0}^{1} Df(tb + (1-t)a)(b-a)\ dt$.
 
     \newpage
     \item Since $B$ is bilinear, $g(x + u) = B(x+u, x+u) = B(x, x+u) + B(u, x+u) = B(x, x) + B(x, u) + B(u, x) + B(u, u) = g(x) + g(u) + (B(u, x) + B(x, u))$.
     
     And since $B$ is bilinear, $B(0, 0) = 0$ and $g(0) = 0$.
 
-    Then, for any $x, u\in \mathbb{R}^p$ and $\epsilon > 0$, 
-    $Dg(x)(u) = (\displaystyle\lim_{h\to 0}\dfrac{\|g(x+h) - g(x) - Dg(x)(h)\|}{\| h\|})(u)$
+    Then, for any $x, u\in \mathbb{R}^p$ and $u' = c\cdot u$ for $c\in \mathbb{R}$,
+    $Dg(x)(u) = (\displaystyle\lim_{u'\to 0}\dfrac{\|g(x+u') - g(x) - Dg(x)(u')\|}{\| u'\|})(u) = ()$
     
     
     \item For any $x_0, y_0 \in \mathbb{R}$, $f(x_0, y_0), f_x(x_0, y_0), f_y(x_0, y_0), f_{xy}(x_0, y_0)$ are all continuous.
