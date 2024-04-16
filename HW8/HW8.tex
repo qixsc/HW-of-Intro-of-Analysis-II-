@@ -61,10 +61,11 @@
     
     And since $B$ is bilinear, $B(0, 0) = 0$ and $g(0) = 0$.
 
-    For any $x, y\in \mathbb{R}^p$, \begin{align*}
+    For any $x, u\in \mathbb{R}^p$ and any $\epsilon > 0$, we can find an $c\in \mathbb{R}$ s.t. $\|g(x+u') - g(x) - Dg(x)(u')\| \leq \epsilon \| u'\|$ where $u = cu'$.
+    Thus, \begin{align*}
         \| B(x, u) + B(u, x) - Dg(x)(u)\| &= \| cB(x, u') + cB(u', x) - cDg(x)(u')\|\\
-        &\leq c(\| g(x) + g(u') + B(x, u') + B(u', x) - Dg(x)(u')\| + \| g(u')\|)\\
-        &\leq c(\epsilon\| u'\| + \| g(u')\|)\\
+        &\leq c(\| g(x) + g(u') + B(x, u') + B(u', x) - g(x) - Dg(x)(u')\| + \| g(u')\|)\\
+        &= c(\| g(x+u') - g(x) - Dg(x)(u')\| + \| g(u')\|)\\
         &\leq 
     \end{align*}
     
