@@ -34,6 +34,21 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
-    \item 
+    \item By observe, $\Delta(x) = \det(D^2f(x))\geq 0$.
+    \begin{enumerate}
+        \item If $\Delta(c) > 0$, $\det(D^2f(c)) > 0$ and $f_{xx}(c) > 0$ implies that $D^2f(c)$ is positive definite.
+        Then, $c$ is local minimun.
+
+        If $\Delta(c) = 0$, then $f_{yy}(c) > 0$ and $f_{xx}(c)f_{yy}(c) = (f_{xy}(c))^2$.
+        
+
+    \end{enumerate}
+
+    \item Since $f_x(x_0) = f_y(x_0) = 0$ and $f \in C^2(V, \mathbb{R})$, $Df(x_0) = 0$ and $x_0$ is a critical point.
+    
+    If $f_{xy}(x_0)\neq 0$, $\det(D^2f(x_0)) = - (f_{xy}(x_0))^2 < 0$, then $D^2f(x_0)$ is not positive definite and negative definite.
+    Thus, $x_0$ will be saddle point.
+
+    \item $R_{r-1}(x_0, h) = \dfrac{1}{r}D^rf(c)(h, \cdots, h)$
 \end{enumerate}
 \end{document} 
