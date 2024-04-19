@@ -36,10 +36,13 @@
 \begin{enumerate}
     \item By observe, $\Delta(x) = \det(D^2f(x))\geq 0$.
     \begin{enumerate}
-        \item If $\Delta(c) > 0$, $\det(D^2f(c)) > 0$ and $f_{xx}(c) > 0$ implies that $D^2f(c)$ is positive definite.
-        Then, $c$ is local minimun.
+        \item Since $\Delta(x) \geq 0$ and $f_xx(x) > 0$, $D^2f(x)$ is semi-definite on $D(c, \delta)$.
+        Thus, for any $x \in D(c, \delta)$, \begin{align*}
+            f(x) - f(c) &= \int_{0}^1 Df(c + t(x-c))(x-c)\\
+            &\leq \int_{0}^{1} 0(x-c)\\
+            &\leq 0
+        \end{align*}
 
-        If $\Delta(c) = 0$, then $f_{yy}(c) > 0$ and $f_{xx}(c)f_{yy}(c) = (f_{xy}(c))^2$.
         
 
     \end{enumerate}
