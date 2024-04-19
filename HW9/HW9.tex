@@ -38,12 +38,19 @@
     \begin{enumerate}
         \item Since $\Delta(x) \geq 0$ and $f_xx(x) > 0$, $D^2f(x)$ is semi-definite on $D(c, \delta)$.
         Thus, for any $x \in D(c, \delta)$, \begin{align*}
-            f(x) - f(c) &= \int_{0}^1 Df(c + t(x-c))(x-c)\\
-            &\leq \int_{0}^{1} 0(x-c)\\
-            &\leq 0
+            Df(x) &= Df(x) - Df(c)\\
+            &= \int_{0}^{1} D^2f(c+t(x-c))(x-c)\ dt\\
+            &\geq \int_{0}^{1} 0(x-c)\ dt\\
+            &\geq 0
+        \end{align*}
+        
+        Then, \begin{align*}
+            f(x) - f(c) &= \int_{0}^1 Df(c + t(x-c))(x-c)\ dt\\
+            &\geq \int_{0}^{1} 0(x-c)\ dt\\
+            &\geq 0
         \end{align*}
 
-        
+        \item 
 
     \end{enumerate}
 
