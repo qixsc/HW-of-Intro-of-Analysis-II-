@@ -36,7 +36,7 @@
 \begin{enumerate}
     \item By observe, $\Delta(x) = \det(D^2f(x))\geq 0$.
     \begin{enumerate}
-        \item Since $\Delta(x) \geq 0$ and $f_{xx}(x) > 0$, $D^2f(x)$ is semi-definite on $D(c, \delta)$.
+        \item Since $\Delta(x) \geq 0$ and $f_{xx}(x) > 0$, $D^2f(x)$ is positive semi-definite on $D(c, \delta)$.
         Thus, for any $x \in D(c, \delta)$, \begin{align*}
             Df(x) &= Df(x) - Df(c)\\
             &= \int_{0}^{1} D^2f(c+t(x-c))(x-c)\ dt\\
@@ -52,16 +52,9 @@
 
         Threrfore, $c$ is a local minimun point of $f$. 
 
-        \item Since $f_{xx}(x) < 0$ for all $x$ and $\Delta(x) \geq 0$, $f_{yy}(x) \leq 0$ for all $x$.
-        
-        For $u^T[D^2f(x)]u = \begin{bmatrix}
-            a & b
-        \end{bmatrix} \begin{bmatrix}
-            f_{xx} & f_{xy}\\
-            f_{xy} & f_{yy}
-        \end{bmatrix}\begin{bmatrix}
-            a \\ b
-        \end{bmatrix} = $
+        \item Since $f_{xx}(x) < 0$ and $\Delta(x) \geq 0$, $D^f(x)$ is negative semi-definite.
+        Using the same argument as (a), we can get $f(x) - f(c) \leq 0$ for all $x\in \| x-c\| < \delta$.
+        Thus, $c$ is local maximun point of $f$.
 
     \end{enumerate}
 
