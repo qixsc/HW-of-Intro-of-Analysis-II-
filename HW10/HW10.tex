@@ -37,7 +37,17 @@
     \item \begin{enumerate}
         \item $f'(0) = \displaystyle\lim_{h\to 0} \dfrac{f(h) - f(0)}{h} = \displaystyle\lim_{h\to 0} 1 + 2h\sin(\dfrac{1}{h}) = 1$.
         
-        \item 
+        \item $\displaystyle\lim_{x\to 0} f(x) = \displaystyle\lim_{h\to \infty} \dfrac{1}{h} + 2\dfrac{\sin(h)}{h^2} = 0$.
+        Thus, $f$ is continuous on $0$.
+        And for any $x$ close to $0$, $|f(x+h) - f(x)| \leq |h| + 2|(x+h)^2| + 2|x^2| \to 0$ as $h, x \to 0$, $f$ is continuous on a small interval $I_1$.
+
+        Since $f'(x) = 1 + 2(2x\sin(\dfrac{1}{x}) - \cos(\dfrac{1}{x}))$, there exsits $x$ in any interval contains $0$ s.t. $f'(x)< 0$.
+        Therefore, $f$ is neither increasing nor decreasing and not one to one in any interval contains $0$.
+        Thus, $f$ is not invertible near $0$.
+
+        \item This is not contradict to inverse function theorem.
     \end{enumerate}
+
+    \item 
 \end{enumerate}
 \end{document} 
