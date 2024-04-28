@@ -54,13 +54,8 @@
         &\leq a\| x_1 - x_2\|
     \end{align*}
 
-    Then, for any $x_1, x_2\in \mathbb{R}^n$ and $x_1 \neq x_2$, $\| f(x_1) - f(x_2)\| \geq \|f(x_1) - f(x_2) - (x_1 - x_2)\| + \| x_1 - x_2\| \geq (1-a)\|x_1 - x_2\| > 0$.
-    Thus, $f$ is one-to-one.
-
-    Since $f$ is continuous, $f(\mathbb{R}^n)$ is closed.
-    And for any $f(x)$, assume that for any $\epsilon > 0$, $D(f(x), \epsilon) \not \subseteq f(\mathbb{R}^n)$.
-    Thus, $f(\mathbb{R}^n)$ is both open and closed, that is, $f(\mathbb{R}^n) = \mathbb{R}^n$ and $f$ is onto.
-    Therefore, $f$ is bijection.
+    And for any $x \in \mathbb{R}^n$, $[Df(x)] = I + [Dg(x)]$, then $\| Df(x)(y)\| = \| y + Dg(x)(y) \| \geq (1-a)\| y\|$.
+    Thus, $Jf(x) \neq 0$ for any $x\in \mathbb{R}^n$, by inverse function theorem, 
    
     \item Since $\|f(x) - f(y) \| \geq C\| x-y \|$ and $C > 0$, 
     
