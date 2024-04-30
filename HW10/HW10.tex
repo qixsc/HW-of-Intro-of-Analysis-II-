@@ -45,7 +45,7 @@
         Therefore, $f$ is neither increasing nor decreasing and not one to one in any interval contains $0$.
         Thus, $f$ is not invertible near $0$.
 
-        \item This is not contradict to inverse function theorem.
+        \item This is not contradict to inverse function theorem since $f'$ is not continuous.
     \end{enumerate}
 
     \item \begin{align*}
@@ -54,7 +54,10 @@
         &\leq a\| x_1 - x_2\|
     \end{align*}
 
-    And for any $x \in \mathbb{R}^n$, $[Df(x)] = I + [Dg(x)]$, then $\| Df(x)(y)\| = \| y + Dg(x)(y) \| \geq (1-a)\| y\|\geq 0$.
+    And for any $x\in \mathbb{R}^n$, $\|Df(x)\| = \|I + Dg(x)\| \geq (1-a)$,
+    then $\| f(x) - f(y)\| = \|Df(c)\| \|x-y\| \geq (1-a)\|x-y\| > 0$ for $x, y\in \mathbb{R}^n$, $x\neq y$ and $c$ on the line between $x, y$.
+    Thus, $f(x) \neq f(y)$ implies that $f$ is one to one.
+
     
    
     \item Since $\|f(x) - f(y) \| \geq C\| x-y \|$ and $C > 0$, 
