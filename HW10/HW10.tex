@@ -60,11 +60,26 @@
 
     Let $h_y(x) = y - g(x)$, then $\| h_y(x_1) - h_y(x_2)\| = \| g(x_1) - g(x_2) \| \leq a\|x_1 - x_2\|$.
     Thus, $h_y$ is contraction mapping and exsits unique fixed point $x^*$ s.t. $x^* = h_y(x^*) = y - g(x^*)$.
+    \newpage
     Then, for any $y$, exsits $x^*$ s.t. $y = x^* + g(x^*) = f(x^*)$.
     Therefore, $f$ is surjective.
     Hence, $f$ is bijective.
    
-    \item Since $\|f(x) - f(y) \| \geq C\| x-y \|$ and $C > 0$, $f$ is one to one.
+    \item Since $\|f(x) - f(y) \| \geq C\| x-y \|$ and $C > 0$, if $x \neq y$, $\| f(x) - f(y) \| \geq C\|x - y\| > 0$.
+    Then, $f$ is injective.
+    And since $f$ is continuous, $f(\mathbb{R}^n)$ is closed since $\mathbb{R}^n$ is closed.
+
+    Now proof $f(\mathbb{R}^n)$ is open.
+    For any $x_0$ and $\epsilon \in (0, C)$, since $f$ is differentiable, there exsits $h$ s.t. 
+    $\| f(x_0+h) - f(x_0) - Df(x_0)(h)\| < \epsilon \| h\|$.
+    Then, since $\| f(x_0+h) - f(x_0)\| - \|Df(x_0)(h)\| \leq \| f(x_0+h) - f(x_0) - Df(x_0)(h)\|$,
+    $C\| h\| - \|Df(x_0)(h)\| < \epsilon\|h\| < C\| h \|$.
+    Thus, $\| Df(x_0)(h)\| > 0$.
+    Therefore, by inverse function theorem, there exsits a neighborhood $U$ near $x_0$ s.t. $f(U)$ is open.
+    Then, $f(\mathbb{R}^n)$ is open.
+
+    Therefore, $f$ is bijective and then $f$ is invertible.
+    And by inverse function theorem, $f^{-1}$ is differentiable and continuous on $\mathbb{R}^n$.
     
 \end{enumerate}
 \end{document} 
