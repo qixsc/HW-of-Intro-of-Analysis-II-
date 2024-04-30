@@ -55,17 +55,16 @@
     \end{align*}
 
     And for any $x\in \mathbb{R}^n$, $\|Df(x)\| = \|I + Dg(x)\| \geq (1-a)$,
-    then $\| f(x) - f(y)\| = \|Df(c)\| \|x-y\| \geq (1-a)\|x-y\| > 0$ for $x, y\in \mathbb{R}^n$, $x\neq y$ and $c$ on the line between $x, y$.
+    then $\| f(x) - f(y)\| = \|x-y\| - \| f(x) - f(y) - (x-y)\| \geq (1-a)\|x-y\| > 0$ for $x, y\in \mathbb{R}^n$, $x\neq y$ and $c$ on the line between $x, y$.
     Thus, $f(x) \neq f(y)$ implies that $f$ is one to one.
 
     Let $h_y(x) = y - g(x)$, then $\| h_y(x_1) - h_y(x_2)\| = \| g(x_1) - g(x_2) \| \leq a\|x_1 - x_2\|$.
     Thus, $h_y$ is contraction mapping and exsits unique fixed point $x^*$ s.t. $x^* = h_y(x^*) = y - g(x^*)$.
     Then, for any $y$, exsits $x^*$ s.t. $y = x^* + g(x^*) = f(x^*)$.
     Therefore, $f$ is surjective.
-    
     Hence, $f$ is bijective.
    
-    \item Since $\|f(x) - f(y) \| \geq C\| x-y \|$ and $C > 0$, $f$ is one to one
+    \item Since $\|f(x) - f(y) \| \geq C\| x-y \|$ and $C > 0$, $f$ is one to one.
     
 \end{enumerate}
 \end{document} 
