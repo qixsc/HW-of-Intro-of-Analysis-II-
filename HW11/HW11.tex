@@ -36,10 +36,17 @@
 \begin{enumerate}
     \item 
 
-    \item Assume $f \in C^1(\mathbb{R}^2, \mathbb{R})$ and $f$ is one-to-one, $Df(x_0, y_0) \neq 0$ for some $x_0, y_0$
+    \item Suppose $f \in C^1(\mathbb{R}^2, \mathbb{R})$, $Df(x_0, y_0) \neq 0$ for some $x_0, y_0$
     (or $f$ is constant function and not one-to-one).
+    Then, suppose $\dfrac{\partial f}{\partial x} \neq 0$ for neighborhood of $(x_0, y_0)$,
+    and let $h(x, y) = f(x, y) - f(x_0, y_0)$ with $\dfrac{\partial h}{\partial x} \neq 0$.
+    by Implicit Function Theorem, there is a neighborhood $U \subseteq \mathbb{R}^2$ and $W \subseteq \mathbb{R}$ s.t. $(x_0, y_0) \in U$ and $y_0 \in W$ 
+    and a function $g: W \to \mathbb{R}^2$ s.t. $h(g(y), y) = f(g(y), y) - f(x_0, y_0) = 0$.
+    Then, $f(g(y), y) = f(x_0, y_0)$ for $y \in W$ and $f$ is not one-to-one.
 
-    Then, suppose $\dfrac{\partial f}{\partial x}(x_0, y_0) \neq 0$,
-    by Implicit Function Theorem, there is a neighborhood $U \subseteq \mathbb{R}^2$ and $W \subseteq \mathbb{R}$ s.t. $(x_0, y_0) \in U$ and $y_0 \in W$.
+    If $\dfrac{\partial f}{\partial x} = 0$, then $\dfrac{\partial f}{\partial y} \neq 0$ and use the same argument can get the same result.
+
+    \item 
+    
 \end{enumerate}
 \end{document} 
