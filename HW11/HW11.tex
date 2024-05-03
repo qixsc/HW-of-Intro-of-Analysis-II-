@@ -82,11 +82,8 @@
         Thus, $c = 1, d = 1$ and $(x, y, z, w) = (1, 2, -1, -2)$ or $(1, -2, 0, 1)$.
     \end{enumerate}
     
-    \item We show that for any $\epsilon > 0$,  we can not find $\phi : D(0, \epsilon) \to \mathbb{R}$ s.t. $F(, \phi(x)) = (\phi(x))^2 - x$ for all $x \in D(0, \epsilon)$.
-    
-    $\phi(x) = \left\{\begin{matrix}
-        \sqrt{x} & \text{ if } x\geq 0\\
-        \sqrt{-x} & \text{ if } x < 0
-    \end{matrix}\right.$
+    \item If $x < 0$, $-x > 0$ and $(\phi(x))^2 \geq 0$. Then, $F(x, \phi(x)) = (\phi(x))^2 - x \geq -x > 0$.
+    Thus, whatever $\phi$ is, the statment $F(x, \phi(x)) = 0$ is false.
+    Therefore, we can't find $\phi$ s.t. $F(x, \phi(x)) = 0$ for any neighborhood $W$ of $0$.
 \end{enumerate}
 \end{document} 
