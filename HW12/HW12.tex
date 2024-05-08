@@ -28,62 +28,12 @@
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0pt plus 1pt
 
-\title{Homework 11 of Introduction to Analysis(II)}
+\title{Homework 12 of Introduction to Analysis(II)}
 \author{AM15 黃琦翔 111652028}
 
 \begin{document}
 \maketitle
 \begin{enumerate}
-    \item For $f \in \mathcal{C}^1(E, \mathbb{R}^n)$ with $E$ is open subset of $\mathbb{R}^n$ and $Jf(x_0) \neq 0$ for some $x_0\in E$ and $y_0 = f(x_0)$.
-    Then, let $h(x, y) = f(x) - y \in \mathcal{C}^1(E\times \mathbb{R}^n \to \mathbb{R}^n)$ and $h(x_0, y_0) = f(x_0) - y_0 = y_0 - y_0 = 0$.
-    We also can get $\dfrac{\partial h}{\partial x} = Df$.
-    Then, by Implicit Function Theorem, there exists open set $W \subseteq \mathbb{R}^n$ with $y_0 \in W$,
-    and unique $g \in \mathcal{C}^1(W, \mathbb{R}^n)$ with $g(y_0) = x_0$ s.t. $0 = h(g(y), y) = f(g(y)) - y \implies y = f(g(y))$ for all $y \in W$ and $g$ is locally inverse function of $f$.
-    And we can get $[Df^{-1}(y)] = [Dg(y)] = - [Df(g(y))]^{-1} [Dg(y)]_y = [Df(g(y))]^{-1} = [Df(f^{-1}(y))]^{-1}$ by Implicit Function Theorem, too.    
-
-    \item Suppose $f \in \mathcal{C}^1(\mathbb{R}^2, \mathbb{R})$, $Df(x_0, y_0) \neq 0$ for some $x_0, y_0$
-    (or $f$ is constant function and not one-to-one).
-    Then, suppose $\dfrac{\partial f}{\partial x} \neq 0$ for neighborhood of $(x_0, y_0)$,
-    and let $h(x, y) = f(x, y) - f(x_0, y_0)$ with $\dfrac{\partial h}{\partial x} \neq 0$.
-    by Implicit Function Theorem, there is a neighborhood $U \subseteq \mathbb{R}^2$ and $W \subseteq \mathbb{R}$ s.t. $(x_0, y_0) \in U$ and $y_0 \in W$ 
-    and a function $g: W \to \mathbb{R}^2$ s.t. $h(g(y), y) = f(g(y), y) - f(x_0, y_0) = 0$.
-    Then, $f(g(y), y) = f(x_0, y_0)$ for $y \in W$ and $f$ is not one-to-one.
-    If $\dfrac{\partial f}{\partial x} = 0$, then $\dfrac{\partial f}{\partial y} \neq 0$ and use the same argument can get the same result.
-
-    \item \begin{enumerate}
-        \item $\nabla f(x, y, z) = (y, x, 0)$
-        And $\nabla g_1(x, y, z) = (2x, 2y, 2z)$, $\nabla g_2(x, y, z) = (1, 1, 1)$.
-
-        Thus, we have $$\left\{\begin{matrix}
-            y &=& 2a x + b\\
-            x &=& 2a y + b\\
-            0 &=& 2a z + b\\
-            1 &=& x^2 + y^2 + z^2\\
-            0 &=& x + y + z
-        \end{matrix}
-        \right.
-        $$
-
-        Then, $a = \dfrac{-1}{2}$, $b = 0$, $(x, y, z) = (\pm \dfrac{1}{\sqrt{2}}, \mp \dfrac{1}{\sqrt{2}}, 0)$ or $(a, b) = (\dfrac{1}{6}, \mp \sqrt{\dfrac{2}{3}}), (x, y, z) = (\mp \dfrac{1}{\sqrt{6}}, \mp \dfrac{1}{\sqrt{6}}, \pm \sqrt{\dfrac{2}{3}})$.
-        
-        \item $\nabla f(x, y, z, w) = (3, 1, 0, 1)$, $\nabla g_1(x, y, z, w) = (6x, 1, 12z^2, 0)$ and $\nabla g_2(x, y, z, w) = (-3x^2, 0, 12z^3, 1)$.
-        
-        Then, we have $$\left\{\begin{matrix}
-            3 &=& 6cx -3dx^2\\
-            1 &=& c\\
-            0 &=& 12cz^2 + 12dz^3\\
-            1 &=& d\\
-            1 &=& 3x^2 + y + 4z^3\\
-            0 &=& -x^3 + 3z^4 + w
-        \end{matrix}
-        \right.
-        $$
-
-        Thus, $c = 1, d = 1$ and $(x, y, z, w) = (1, 2, -1, -2)$ or $(1, -2, 0, 1)$.
-    \end{enumerate}
-    
-    \item If $x < 0$, $-x > 0$ and $(\phi(x))^2 \geq 0$. Then, $F(x, \phi(x)) = (\phi(x))^2 - x \geq -x > 0$.
-    Thus, whatever $\phi$ is, the statment $F(x, \phi(x)) = 0$ is false.
-    Therefore, we can't find $\phi$ s.t. $F(x, \phi(x)) = 0$ for any neighborhood $W$ of $0$.
+    \item 
 \end{enumerate}
 \end{document} 
