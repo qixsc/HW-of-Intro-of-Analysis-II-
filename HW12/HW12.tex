@@ -28,7 +28,7 @@
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0pt plus 1pt
 
-\DeclareMathOperator{\volumn}{Vol}
+\DeclareMathOperator{\volume}{Vol}
 \DeclareMathOperator{\interior}{int}
 \DeclareMathOperator{\closure}{cl}
 
@@ -39,28 +39,28 @@
 \maketitle
 \begin{enumerate}
     \item \begin{enumerate}
-        \item Since $E$ is Jordan region, $\volumn(\partial E) = 0$.
+        \item Since $E$ is Jordan region, $\volume(\partial E) = 0$.
 
         \item Since $\closure(E) = \interior(E) \cup \partial E$ and $\interior(E)\subseteq E \subseteq \closure(E)$,
 
-        $\volumn(\closure(E)) \leq \volumn(\interior(E)) + \volumn(\partial E) = \volumn(\interior(E))\leq \volumn(E) \leq \volumn(\closure(E))$.
+        $\volume(\closure(E)) \leq \volume(\interior(E)) + \volume(\partial E) = \volume(\interior(E))\leq \volume(E) \leq \volume(\closure(E))$.
 
-        Therefore, $\volumn(\closure(E)) = \volumn(\interior(E)) = E$.
+        Therefore, $\volume(\closure(E)) = \volume(\interior(E)) = E$.
 
         \item $\ $
         \begin{enumerate}
-            \item[$(\implies)$] From $(b)$, we know $\volumn(\interior(E)) = \volumn(E) > 0$, 
+            \item[$(\implies)$] From $(b)$, we know $\volume(\interior(E)) = \volume(E) > 0$, 
             then we can find a set of rectangles $R_n$ s.t. $\sum |R_n| > 0$ and $\cup R_n \subseteq \interior(E)$.
             Therefore, $\interior(E) \neq \emptyset$.
 
             \item[$(\impliedby)$] Since $\interior(E)$ is non-empty, for any $x_0\in \interior(E)$, there exists $\epsilon > 0$ s.t. $D(x_0, \epsilon) \subseteq \interior(E)$.
             Then, we can find a small rectangle $R$ with each length is $\dfrac{\epsilon}{2}$ and $R$ is contained in $D(x_0, \epsilon)$.
-            Thus, $\volumn(\interior(E)) > \left(\dfrac{\epsilon}{2}\right)^2 > 0$.
+            Thus, $\volume(\interior(E)) > \left(\dfrac{\epsilon}{2}\right)^2 > 0$.
         \end{enumerate}
 
         \item Since $f$ is continuous, for any $x_0 \in [a, b]$, we can find a sequence $x_k \to x_0$ s.t. $f(x_k) \to f(x_0)$.
         That is, $A = \{(x, f(x)) \mid x\in [a, b]\}$ is closed.
-        And since $\partial A \subseteq A$, $\volumn(\partial A) \leq \volumn(A)$.
+        And since $\partial A \subseteq A$, $\volume(\partial A) \leq \volume(A)$.
         
         Since $f$ is continuous on $[a, b]$ is compact, for all $\epsilon > 0$, we can find $\delta > 0$ s.t. $|x-y| < \delta$ implies That $|f(x) - f(y)| < \dfrac{\epsilon}{b-a}$.
         Then, we can find a finite increasing sequence $\{x_i \mid x_i \in [a, b]\}_{i=1}^N$ s.t. $[a, b] \subseteq D(x_i, \dfrac{\delta}{2})$.
@@ -70,7 +70,7 @@
         and we can get $[a, b] = \cup [u_i, u_{i+1}]$.
         Thus, $A \subseteq \displaystyle\bigcup_{i=0}^N [u_i, u_{i+1}] \times D(\xi_i, \dfrac{\epsilon}{b-a})$ for some $\xi_i \in \{ f(x)\mid x\in [u_i, u_i=1]\}$
         with the sum of the rectangles is $\dfrac{\epsilon}{b-a} \cdot (b-a) = \epsilon$.
-        Hence, $\volumn(A) = 0$ and $\volumn(\partial A) = 0$.
+        Hence, $\volume(A) = 0$ and $\volume(\partial A) = 0$.
 
         \item Yes. Since $f$ is integrable, for any $\epsilon > 0$, 
         we can find an partition $P$ s.t. $U(f, P) - L(f, P) < \epsilon$.
