@@ -58,12 +58,16 @@
             Thus, $\volumn(\interior(E)) > \left(\dfrac{\epsilon}{2}\right)^2 > 0$.
         \end{enumerate}
 
-        \item Since $f$ is continuous on $[a, b]$ is compact, we can find $M \in \mathbb{R}$ s.t.
-        for all $\delta > 0$, $|x - y| < \delta$ implies that $|f(x) - f(y)| < M \cdot \delta$
-
+        \item Since $f$ is continuous, for any $x_0 \in [a, b]$, we can find a sequence $x_k \to x_0$ s.t. $f(x_k) \to f(x_0)$.
+        That is, $A = \{(x, f(x)) \mid x\in [a, b]\}$ is closed.
+        And since $\partial A \subseteq A$, $\volumn(\partial A) \leq \volumn(A)$.
+        
+        Since $f$ is continuous on $[a, b]$ is compact, we can find $M \in \mathbb{R}$ s.t.
+        for all $\delta > 0$, $|x - y| < \delta$ implies that $|f(x) - f(y)| < M \cdot \delta$.
         Then, let $\epsilon = M \cdot \delta$ find a finite sequence $\{x_i \mid x_i \in [a, b]\}_{i=1}^N$ s.t. $[a, b] \subseteq D(x_i, \delta)$.
         Therefore, for any $y = f(x)$, $y \in D(f(x_i), \epsilon)$ for some $i$.
-        Thus, $A = \{(x, f(x)) \mid x\in [a, b]\} \subseteq \displaystyle\bigcup_{i=1}^N D(x_i, \delta)\times D(f(x_i), \epsilon)$ and $|D(x_i, \delta) \times D(f(x_i), \epsilon)| = \delta \times \epsilon = \xi$.
+        Thus, $A = \{(x, f(x)) \mid x\in [a, b]\} \subseteq \displaystyle\bigcup_{i=1}^N D(x_i, \delta)\times D(f(x_i), \epsilon)$ and $|D(x_i, \delta) \times D(f(x_i), \epsilon)| = \delta \cdot \epsilon < M\cdot \delta^2$.
+        Since $\delta$ is 
     \end{enumerate}
 \end{enumerate}
 \end{document} 
