@@ -58,7 +58,12 @@
             Thus, $\volumn(\interior(E)) > \left(\dfrac{\epsilon}{2}\right)^2 > 0$.
         \end{enumerate}
 
-        \item 
+        \item Since $f$ is continuous on $[a, b]$ is compact, for any $\epsilon > 0$, there exists $\delta > 0$ s.t. 
+        $|x-y| < \delta$ implies that $|f(x) - f(y)|< \epsilon$.
+
+        Then, let $\xi = \delta \cdot \epsilon$ and find a finite sequence $\{x_i \mid x_i \in [a, b]\}_{i=1}^N$ s.t. $[a, b] \subseteq D(x_i, \delta)$.
+        Therefore, for any $y = f(x)$, $y \in D(f(x_i), \epsilon)$ for some $i$.
+        Thus, $A = \{(x, f(x)) \mid x\in [a, b]\} \subseteq \displaystyle\bigcap_{i=1}^N D(x_i, \delta)\times D(f(x_i), \epsilon)$ and $|D(x_i, \delta) \times D(f(x_i), \epsilon)| = \delta \times \epsilon = \xi$.
     \end{enumerate}
 \end{enumerate}
 \end{document} 
