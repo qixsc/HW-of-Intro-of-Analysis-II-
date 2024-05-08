@@ -31,6 +31,7 @@
 \DeclareMathOperator{\volume}{Vol}
 \DeclareMathOperator{\interior}{int}
 \DeclareMathOperator{\closure}{cl}
+\newcommand{\boundary}{\boundary}
 
 \title{Homework 12 of Introduction to Analysis(II)}
 \author{AM15 黃琦翔 111652028}
@@ -39,11 +40,11 @@
 \maketitle
 \begin{enumerate}
     \item \begin{enumerate}
-        \item Since $E$ is Jordan region, $\volume(\partial E) = 0$.
+        \item Since $E$ is Jordan region, $\volume(\boundary E) = 0$.
 
-        \item Since $\closure(E) = \interior(E) \cup \partial E$ and $\interior(E)\subseteq E \subseteq \closure(E)$,
+        \item Since $\closure(E) = \interior(E) \cup \boundary E$ and $\interior(E)\subseteq E \subseteq \closure(E)$,
 
-        $\volume(\closure(E)) \leq \volume(\interior(E)) + \volume(\partial E) = \volume(\interior(E))\leq \volume(E) \leq \volume(\closure(E))$.
+        $\volume(\closure(E)) \leq \volume(\interior(E)) + \volume(\boundary E) = \volume(\interior(E))\leq \volume(E) \leq \volume(\closure(E))$.
 
         Therefore, $\volume(\closure(E)) = \volume(\interior(E)) = E$.
 
@@ -60,7 +61,7 @@
 
         \item Since $f$ is continuous, for any $x_0 \in [a, b]$, we can find a sequence $x_k \to x_0$ s.t. $f(x_k) \to f(x_0)$.
         That is, $A = \{(x, f(x)) \mid x\in [a, b]\}$ is closed.
-        And since $\partial A \subseteq A$, $\volume(\partial A) \leq \volume(A)$.
+        And since $\boundary A \subseteq A$, $\volume(\partial A) \leq \volume(A)$.
         
         Since $f$ is continuous on $[a, b]$ is compact, for all $\epsilon > 0$, we can find $\delta > 0$ s.t. $|x-y| < \delta$ implies That $|f(x) - f(y)| < \dfrac{\epsilon}{b-a}$.
         Then, we can find a finite increasing sequence $\{x_i \mid x_i \in [a, b]\}_{i=1}^N$ s.t. $[a, b] \subseteq D(x_i, \dfrac{\delta}{2})$.
@@ -70,11 +71,11 @@
         and we can get $[a, b] = \cup [u_i, u_{i+1}]$.
         Thus, $A \subseteq \displaystyle\bigcup_{i=0}^N [u_i, u_{i+1}] \times D(\xi_i, \dfrac{\epsilon}{b-a})$ for some $\xi_i \in \{ f(x)\mid x\in [u_i, u_i=1]\}$
         with the sum of the rectangles is $\dfrac{\epsilon}{b-a} \cdot (b-a) = \epsilon$.
-        Hence, $\volume(A) = 0$ and $\volume(\partial A) = 0$.
+        Hence, $\volume(A) = 0$ and $\volume(\boundary A) = 0$.
 
         \item Yes. Since $f$ is integrable, for any $\epsilon > 0$, 
         we can find an partition $P$ s.t. $|U(f, P) - L(f, P)|< \epsilon$.
-        Thus, $\volume(A) = 0$ and $\volume(\partial A) = 0$.
+        Thus, $\volume(A) = 0$ and $\volume(\boundary A) = 0$.
     \end{enumerate}
 \end{enumerate}
 \end{document} 
