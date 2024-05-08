@@ -63,10 +63,16 @@
         And since $\partial A \subseteq A$, $\volumn(\partial A) \leq \volumn(A)$.
         
         Since $f$ is continuous on $[a, b]$ is compact, for all $\epsilon > 0$, we can find $\delta > 0$ s.t. $|x-y| < \delta$ implies That $|f(x) - f(y)| < \dfrac{\epsilon}{b-a}$.
-        Then, we can find a finite sequence $\{x_i \mid x_i \in [a, b]\}_{i=1}^N$ s.t. $[a, b] \subseteq D(x_i, \delta)$.
-        Therefore, for any $y = f(x)$, $y \in D(f(x_i), \epsilon)$ for some $i$.
-        Thus, $A = \{(x, f(x)) \mid x\in [a, b]\} \subseteq \displaystyle\bigcup_{i=1}^N D(x_i, \delta)\times D(f(x_i), \epsilon)$ and $|D(x_i, \delta) \times D(f(x_i), \epsilon)| = \delta \cdot \epsilon < M\cdot \delta^2$.
-        Since $\delta$ is arbitrary, 
+        Then, we can find a finite increasing sequence $\{x_i \mid x_i \in [a, b]\}_{i=1}^N$ s.t. $[a, b] \subseteq D(x_i, \dfrac{\delta}{2})$.
+        Therefore, for any $y = f(x)$, $y \in D(f(x_i), \dfrac{\epsilon}{b-a})$ for some $i$.
+
+        Then, take $u_0 = a$, $u_i \in D(x_i, \dfrac{\delta}{2})\cap D(x_{i+1}, \dfrac{\delta}{2})$, $u_N = b$,
+        and we can get $[a, b] = \cup [u_i, u_{i+1}]$.
+        Thus, $A \subseteq \displaystyle\bigcup_{i=0}^N [u_i, u_{i+1}] \times D(\xi_i, \dfrac{\epsilon}{b-a})$ for some $\xi_i \in \{ f(x)\mid x\in [u_i, u_i=1]\}$
+        with the sum of the rectangles is $\dfrac{\epsilon}{b-a} \cdot (b-a) = \epsilon$.
+        Hence, $\volumn(A) = 0$ and $\volumn(\partial A) = 0$.
+
+        \item 
     \end{enumerate}
 \end{enumerate}
 \end{document} 
