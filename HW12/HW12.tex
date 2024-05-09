@@ -31,7 +31,7 @@
 \DeclareMathOperator{\volume}{Vol}
 \DeclareMathOperator{\interior}{int}
 \DeclareMathOperator{\closure}{cl}
-\newcommand{\boundary}{\boundary}
+\newcommand{\boundary}{\partial}
 
 \title{Homework 12 of Introduction to Analysis(II)}
 \author{AM15 黃琦翔 111652028}
@@ -61,7 +61,7 @@
 
         \item Since $f$ is continuous, for any $x_0 \in [a, b]$, we can find a sequence $x_k \to x_0$ s.t. $f(x_k) \to f(x_0)$.
         That is, $A = \{(x, f(x)) \mid x\in [a, b]\}$ is closed.
-        And since $\boundary A \subseteq A$, $\volume(\partial A) \leq \volume(A)$.
+        And since $\boundary A \subseteq A$, $\volume(\boundary A) \leq \volume(A)$.
         
         Since $f$ is continuous on $[a, b]$ is compact, for all $\epsilon > 0$, we can find $\delta > 0$ s.t. $|x-y| < \delta$ implies That $|f(x) - f(y)| < \dfrac{\epsilon}{b-a}$.
         Then, we can find a finite increasing sequence $\{x_i \mid x_i \in [a, b]\}_{i=1}^N$ s.t. $[a, b] \subseteq D(x_i, \dfrac{\delta}{2})$.
