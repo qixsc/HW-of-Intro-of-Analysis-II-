@@ -44,7 +44,12 @@
         \begin{enumerate}
             \item If $x\in \boundary\interior(E)$, $D(x, \epsilon) \cap \interior(E) \neq \emptyset$ and $D(x, \epsilon) \cap (M\setminus \interior(E)) \neq \emptyset$.
             
-            Thus, 
+            Thus, $D(x, \epsilon)\cap E \neq \emptyset$ and $D(x,\epsilon) \cap (M\setminus \interior(E)) \neq \emptyset$.
+
+            If $D(x, \epsilon) \cap (M\setminus E) \neq \emptyset$, then $x\in \partial E$.
+
+            If $D(x, \epsilon) \cap (M\setminus E) = \emptyset$, $D(x, \epsilon) \subseteq E$.
+            Then, $D(x, \epsilon) \cap (E\setminus \interior(E)) \neq \emptyset$.
         \end{enumerate}
 
         \item Since $\closure(E) = \interior(E) \cup \boundary E$ and $\interior(E)\subseteq E \subseteq \closure(E)$,
