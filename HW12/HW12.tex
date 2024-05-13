@@ -112,7 +112,13 @@
         \end{align*}
         Thus, $\volume(E_1\cup E_2) = \volume(E_1) + \volume(E_2)$.
 
-        \item 
+        \item Let $E_1\setminus E_1 = S_1$, $E_2 = S_2$.
+        We have $S_1$ and $S_2$ are Jordan regions and non-overlapping.
+        Thus, $\volume(E_1) = \volume(S_1 \cup S_2) = \volume(S_1) + \volume(S_1)$ and 
+        $\volume(E_1\setminus E_2) = \volume(E_1) - \volume(E_2)$.
+
+        \item Using (b), (c) and the fact $E_1 \cup E_2 = (E_1 \setminus E_1 \cap E_2) \cup (E_1 \cap E_2) \cup (E_2 \setminus E_2\cap E_1)$,
+        we can get $\volume(E_1 \cup E_2) = (\volume(E_1) - \volume(E_1 \cap E_2)) + \volume(E_1 \cap E_2) + (\volume(E_2) - \volume(E_1 \cap E_2)) = \volume(E_1) + \volume(E_2) - \volume(E_1\cap E_2)$.
     \end{enumerate}
 \end{enumerate}
 \end{document} 
