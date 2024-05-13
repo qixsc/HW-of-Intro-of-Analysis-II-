@@ -104,11 +104,13 @@
         Also we have $\interior(E_1) \cup \interior(E_2) \subseteq E_1 \cup E_2$ and $\interior(E_1) \cap \interior(E_2) = \emptyset$.
 
         \begin{align*}
-            \volume(E_1) + \volume(E_2) &= \volume(\interior(E_1)) + \volume(\interior(E_1))\\
-            &= \volume(\interior(E_1) \cup \interior(E_2))\\
+            \volume(\interior(E_1)) + \volume(\interior(E_1)) &= \volume(\interior(E_1) \cup \interior(E_2))\\
             &\leq \volume(E_1 \cap E_2)\\
-            &\leq 
+            &\leq \volume(\interior(E_1)) + \volume(\interior(E_1)) + \volume(\boundary E_1) + \volume(\boundary E_2)\\
+            &= \volume(\interior(E_1)) + \volume(\interior(E_2))\\
+            &= \volume(E_1) + \volume(E_2)
         \end{align*}
+        Thus, $\volume(E_1\cup E_2) = \volume(E_1) + \volume(E_2)$.
 
         \item 
     \end{enumerate}
