@@ -40,22 +40,8 @@
 \maketitle
 \begin{enumerate}
     \item \begin{enumerate}
-        \item Since $E$ is Jordan region, $E$ is bounded and for all $\epsilon^* > 0$, we can find a grid $g$ s.t. $\volume(\boundary E, g) < \epsilon^*$.
-        If $x\in \boundary\interior(E)$, $D(x, \epsilon) \cap \interior(E) \neq \emptyset$ and $D(x, \epsilon) \cap (M\setminus \interior(E)) \neq \emptyset$.
-        Thus, $D(x, \epsilon)\cap E \neq \emptyset$ and $D(x,\epsilon) \cap (M\setminus \interior(E)) \neq \emptyset$.
-
-        If $D(x, \epsilon) \cap (M\setminus E) \neq \emptyset$, then $x\in \boundary E$.
-        If $D(x, \epsilon) \cap (M\setminus E) = \emptyset$, $D(x, \epsilon) \subseteq E$.
-        Then, $D(x, \epsilon) \cap (E\setminus \interior(E)) \neq \emptyset$,
-        that is, $D(x, \epsilon) \cap \boundary E \neq \emptyset$.
-        If $x\in \interior(E)$, then exists $\epsilon > 0$ s.t. $D(x, \epsilon) \subseteq \interior(E) \cap \boundary E = \emptyset$.
-        Thus, $x \in \boundary E$.
-
-        Therefore, $x\in \boundary \interior(E) \implies x\in \boundary E$.
-        Then, $\volume(\boundary \interior(E)) \leq \volume(\boundary E) = 0$.
-
-        And for $\closure(E)$, we can use the same argument to proof $D(x, r)\setminus \closure(E)$ is Jordan region for some $U\supseteq \closure(E)$ is open and bounded,
-        and that implies $\closure(E)$ is Jordan region.
+        \item Since  $\boundary \interior(E) = \closure(\interior(E)) \setminus \interior(\interior(E)) = \closure(E) \setminus \interior(E) = \boundary E$ and $\boundary \closure(E) = \boundary E$,
+        we can get $\volume(\interior(E)) = \volume(\closure(E)) = \volume(E) = 0$ and $\interior(E), \closure(E)$ are Jordan regions.
 
         \item Since $\closure(E) = \interior(E) \cup \boundary E$ and $\interior(E)\subseteq E \subseteq \closure(E)$,
 
