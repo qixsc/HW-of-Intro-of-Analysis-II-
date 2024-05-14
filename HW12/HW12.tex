@@ -91,7 +91,8 @@
 
         \begin{align*}
             \volume(\interior(E_1)) + \volume(\interior(E_1)) &= \volume(\interior(E_1) \cup \interior(E_2))\\
-            &\leq \volume(\interior())\volume(E_1 \cap E_2)\\
+            &\leq \volume(\interior(E_1) \cup \interior(E_2)) + \volume(E_1 \cap E_2)\\
+            &= \volume(E_1 \cup E_2)\\
             &\leq \volume(\interior(E_1)) + \volume(\interior(E_1)) + \volume(\boundary E_1) + \volume(\boundary E_2)\\
             &= \volume(\interior(E_1)) + \volume(\interior(E_2))\\
             &= \volume(E_1) + \volume(E_2)
