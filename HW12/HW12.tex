@@ -70,7 +70,7 @@
 
         Then, take $u_0 = a$, $u_i \in D(x_i, \dfrac{\delta}{2})\cap D(x_{i+1}, \dfrac{\delta}{2})$, $u_N = b$,
         and we can get $[a, b] = \cup [u_i, u_{i+1}]$.
-        Thus, $A \subseteq \displaystyle\bigcup_{i=0}^N [u_i, u_{i+1}] \times D(\xi_i, \dfrac{\epsilon}{b-a})$ for some $\xi_i \in \{ f(x)\mid x\in [u_i, u_i=1]\}$
+        Thus, $A \subseteq \displaystyle\bigcup_{i=0}^N [u_i, u_{i+1}] \times D(\xi_i, \dfrac{\epsilon}{b-a})$ for some $\xi_i \in \{ f(x)\mid x\in [u_i, u_{i+1}]\}$
         with the sum of the rectangles is $\dfrac{\epsilon}{b-a} \cdot (b-a) = \epsilon$.
         Hence, $\volume(A) = 0$ and $\volume(\boundary A) = 0$.
 
@@ -85,13 +85,13 @@
         \item For $x \in \boundary (E_1 \cap E_2)$, $x\in \closure(E_1 \cap E_2) \cap \closure(M\setminus E_1 \cap E_2)$.
         Then, if $E_1 \cap E_2$ is not Jordan region, $\volume(E_1\cap E_2) = a > 0$.
     
-        \item Since $E_1, E_2$ are non-overlapping, $E_1 \cap E_2 \subseteq \boundary E_1 \cap \boundary E_2$.
+        \item Since $E_1, E_2$ are non-overlapping, $E_1 \cap E_2 \subseteq \boundary E_1 \cup \boundary E_2$.
         And since $E_1, E_2$ are Jordan regions, $\volume(E_1) = \volume(\interior(E_1))$ and $\volume(E_2) = \volume(\interior(E_2))$.
         Also we have $\interior(E_1) \cup \interior(E_2) \subseteq E_1 \cup E_2$ and $\interior(E_1) \cap \interior(E_2) = \emptyset$.
 
         \begin{align*}
             \volume(\interior(E_1)) + \volume(\interior(E_1)) &= \volume(\interior(E_1) \cup \interior(E_2))\\
-            &\leq \volume(E_1 \cap E_2)\\
+            &\leq \volume(\interior())\volume(E_1 \cap E_2)\\
             &\leq \volume(\interior(E_1)) + \volume(\interior(E_1)) + \volume(\boundary E_1) + \volume(\boundary E_2)\\
             &= \volume(\interior(E_1)) + \volume(\interior(E_2))\\
             &= \volume(E_1) + \volume(E_2)
