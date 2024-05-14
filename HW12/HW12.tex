@@ -52,7 +52,7 @@
         \item $\ $
         \begin{enumerate}
             \item[$(\implies)$] From $(b)$, we know $\volume(\interior(E)) = \volume(E) > 0$, 
-            then we can find a set of rectangles $R_n$ s.t. $\sum |R_n| > 0$ and $\cup R_n \subseteq \interior(E)$.
+            then for any $\epsilon > 0$, we can find a set of rectangles $R_n$ s.t. $\volume(E) > \sum |R_n| > \volume(E) - \epsilon$ and $\cup R_n \subseteq \interior(E)$.
             Therefore, $\interior(E) \neq \emptyset$.
 
             \item[$(\impliedby)$] Since $\interior(E)$ is non-empty, for any $x_0\in \interior(E)$, there exists $\epsilon > 0$ s.t. $D(x_0, \epsilon) \subseteq \interior(E)$.
