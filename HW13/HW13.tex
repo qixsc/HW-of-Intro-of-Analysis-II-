@@ -50,12 +50,15 @@
         Therefore, union of countable measure zero sets is measure zero.
 
         \item Since $A$ is compact and (a), we can find finite open cubes which covers $A$ and volume of their union is less than $\epsilon$.
-        Thus, take closure on each open cube and we can find a retangle covers $A$ with volume less than $\epsilon$.
+        Thus, take union of closure on each open cube and we can find a retangle covers $A$ with volume less than $\epsilon$.
         Therefore, volume of $A$ is $0$.
     \end{enumerate}
 
     \item For any grid $g$, $U(1, g) = L(1, g)$. Then, $1$ is integrable.
     And for any $\epsilon > 0$, there exists rectangles $R_i$ s.t. $|\sum |R_i| - \volume(E)| <\epsilon$.
+    Thus, $\displaystyle\int_E 1\ dE \leq U(1, g) = \sum 1 \cdot |R_i| < \volume(E) + \epsilon$.
+    Also, $\displaystyle\int_E 1\ dE \geq \volume(E) - \epsilon$.
+    Therefore, $\displaystyle\int_E 1\ dE = \volume(E)$.
 
     \item \begin{enumerate}
         \item If $x$ is rational, $G(x, t) = \displaystyle\int_{0}^{t} 1\ dy = t$.
