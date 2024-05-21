@@ -40,7 +40,11 @@
 \maketitle
 \begin{enumerate}
     \item \begin{enumerate}
-        \item Since the 
+        \item Since a rectangle $R$ is compact, for all $\epsilon > 0$, we can find finite open cubes $C_i$ s.t. $\cup C_i \supseteq R$
+        and $\volume(\cup C_i) < \volume(R) + \epsilon$.
+        Therefore, for $R_j$, we can find $\volume(\cup C_{i, j}) < \volume(R_j) + \dfrac{\epsilon}{2^j}$.
+        And the total volume of $\displaystyle\cup_{i, j} C_{i, j} < \volume(\cup R_j) + \epsilon < 2\epsilon$.
+        Thus, we can find a countable set of open cubes covers a measure zero set.
 
         \item Since for any $E_i$ is measure zero, we can find $\{ R_{i, j}\}_j$ s.t. 
         $\displaystyle\sum_{j} |R_{i, j}| < \dfrac{\epsilon}{2^{i}}$.
