@@ -62,7 +62,8 @@
     Then, for a large enough $N\in \mathbb{N}$, $A_N = \{x\in E\mid f(x) > \dfrac{1}{N}\}$.
     Using the same argument of $1$. , we can have $A_N \to A$ as $N \to \infty$.
     Since $\displaystyle\int_{E} f(x)\ dx = 0$, $\displaystyle\int_{A_N} f(x)\ dx = 0$.
-    Thus, for any $\epsilon > 0$, there exists rectangles such that (L)$\displaystyle\int_{A_N} f(x)\ dx \geq \dfrac{1}{N}\sum |R_i|$.
+    Thus, for any $\epsilon > 0$, there exists rectangles such that $\dfrac{1}{N}\sum |R_i| \leq (L)\displaystyle\int_{A_N} f(x)\ dx \leq \epsilon$.
+    Thus, $\sum |R_i| < N \cdot \epsilon$.
     
 \end{enumerate}
 \end{document} 
