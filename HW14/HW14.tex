@@ -50,7 +50,7 @@
 
     \item Let $\displaystyle\int_0^1 f(x)\ dx = \alpha$ and $\displaystyle\sup_{x\in [0, 1]} \sup f(x) = M$.
     
-    By $1$, 
+    By $1$. , 
     
     Since $f$ is integrable, there exists a partition $P$ s.t. $\int_{0}^{1} f(x)\ dx - L(f, P) \leq \dfrac{\alpha}{4}$.
 
@@ -59,8 +59,10 @@
     \item Let $A = \{x \in E\mid f(x)\neq 0\}$. If $A$ is empty, then $A$ is measure zero.
     
     Suppose $A$ is non-empty.
-    Since $\displaystyle\int_{E} f(x)\ dx = 0$, then for any $\epsilon > 0$,
-    there exists rectangles $R_n$ cover $E$ such that (U)$\displaystyle\int_{E} f(x)\ dx = \sum \displaystyle\sup_{x \in R_i} f(x) \cdot |R_i| < \epsilon$.
+    Then, for a large enough $N\in \mathbb{N}$, $A_N = \{x\in E\mid f(x) > \dfrac{1}{N}\}$.
+    Using the same argument of $1$. , we can have $A_N \to A$ as $N \to \infty$.
+    Since $\displaystyle\int_{E} f(x)\ dx = 0$, $\displaystyle\int_{A_N} f(x)\ dx = 0$.
+    Thus, for any $\epsilon > 0$, there exists rectangles such that (L)$\displaystyle\int_{A_N} f(x)\ dx \geq \dfrac{1}{N}\sum |R_i|$.
     
 \end{enumerate}
 \end{document} 
