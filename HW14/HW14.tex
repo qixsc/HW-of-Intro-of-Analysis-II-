@@ -48,18 +48,11 @@
     Therefore, $A = \cup A_M$.
 
     \item First, want to proof $E$ contains finite union of intervals.
-    For all $x \in E$ and $f$ is continuous on neighborhood of $x$, 
-    we can find finite union of open intervals cover it.
-    Thus, we can find finite union of intervals $\cup I_n$ such that $f(x) \geq \dfrac{\alpha}{2}$ 
-    and $f$ is continuous on some open interval $U$ contains $x$ for all $x \in \cup I_n$.
-    
-    And for $f(x) \geq \dfrac{\alpha}{2}$ but $f(x)$ is not continuous.
-    If $x \in \closure(I_n)$ for some $n$, then just add into the interval.
-    Else $x \notin \closure(I_n)$ for all $n$, just drop it since the length is zero.
-    And we have the length $L = \cup |I_n|$.
+    Since $f$ is integrable, we can find some $x \in E$ and $U\subseteq E$ for $U$ is neighborhood of $x$.
+    That is, we can find finite union of open intervals $\cup_N I_n$ in $E$, and we let $L = \displaystyle\sum_{n=1}^N|I_n|$.
     
     Suppose $M_0 = \sup f(x)$ and $\alpha_0 = \displaystyle\int_{0}^{1} f(x)\ dx$,
-    If $L < \dfrac{\alpha}{4M}$, 
+    If $L < \dfrac{\alpha_0}{4M_0}$, 
     
     \item Let $A = \{x \in E\mid f(x)\neq 0\}$. If $A$ is empty, then $A$ is measure zero.
     
