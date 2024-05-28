@@ -47,11 +47,20 @@
     Then, $x \in A_N$.
     Therefore, $A = \cup A_M$.
 
-    \item Since $f$ is integrable, there exists a partition $P$ s.t. $\displaystyle\int_{0}^{1} f(x)\ dx - L(f, P) \leq \dfrac{\alpha}{4}$.
-
-    Then, $\displaystyle\int_{0}^{1} f(x)\ dx \leq L(f, P) + \dfrac{\alpha}{4}$.
-    And 
-
+    \item First, want to proof $E$ contains finite union of intervals.
+    For all $x \in E$ and $f$ is continuous on neighborhood of $x$, 
+    we can find finite union of open intervals cover it.
+    Thus, we can find finite union of intervals $\cup I_n$ such that $f(x) \geq \dfrac{\alpha}{2}$ 
+    and $f$ is continuous on some open interval $U$ contains $x$ for all $x \in \cup I_n$.
+    
+    And for $f(x) \geq \dfrac{\alpha}{2}$ but $f(x)$ is not continuous.
+    If $x \in \closure(I_n)$ for some $n$, then just add into the interval.
+    Else $x \notin \closure(I_n)$ for all $n$, just drop it since the length is zero.
+    And we have the length $L = \cup |I_n|$.
+    
+    Suppose $M_0 = \sup f(x)$ and $\alpha_0 = \displaystyle\int_{0}^{1} f(x)\ dx$,
+    If $L < \dfrac{\alpha}{4M}$, 
+    
     \item Let $A = \{x \in E\mid f(x)\neq 0\}$. If $A$ is empty, then $A$ is measure zero.
     
     Suppose $A$ is non-empty.
