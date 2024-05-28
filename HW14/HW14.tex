@@ -49,13 +49,12 @@
 
     \item First, want to proof $E$ contains finite union of intervals.
     Since $f$ is integrable, we can find some $x \in E$ and $U\subseteq E$ for $U$ is neighborhood of $x$.
-    That is, we can find union of open intervals $\cup_N I_n$ in $E$ with $|I_1| \geq |I_2|\geq \cdots$, and we let $L = \displaystyle\sum_{n=1}^N|I_n|$.
+    That is, we can find union of open intervals $\cup_N I_n$ in $E$ with $|I_1| \geq |I_2|\geq \cdots$, and we let $L_N = \displaystyle\sum_{n=1}^N|I_n|$.
     
     Suppose $M_0 = \sup f(x)$ and $\alpha_0 = \displaystyle\int_{0}^{1} f(x)\ dx$,
     We want to show that there exists finite $N_0$ s.t. $\displaystyle\sum_{i=1}^{N_0} |I_n| \geq \dfrac{\alpha_0}{4M_0}$.
-    
     Since there exists a partition $P$ s.t. $\displaystyle\int_{0}^{1} f(x)\ dx - L(f, P) \leq \dfrac{\alpha_0}{4}$,
-    Then, 
+    Then, if $\sup L_n < \dfrac{\alpha_0}{4M_0}$, $L(f, P) \leq (1-\sup L_n)*\dfrac{\alpha_0}{2} + \sup L_n \cdot M < \dfrac{4M-\alpha_0+8M}{8M}\alpha_0$
     
     \item Let $A = \{x \in E\mid f(x)\neq 0\}$. If $A$ is empty, then $A$ is measure zero.
     
